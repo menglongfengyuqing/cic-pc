@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台—中投摩根-账户-充值</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/account.css" />
+		<link rel="stylesheet" type="text/css" href="css/account_new.css" />
+		<link rel="stylesheet" type="text/css" href="css/home.min.css" />
+	</head>
+
+	<body class="">
+		<!--main_contain-->
+		<div class="home_wrap con_wrap">
+			<div class="home_l fl">
+				<ul>
+					<li class="cur">
+						<a href="account_home.html">账户总览</a>
+					</li>
+					<li>
+						<a href="account_invest.html">我的出借</a>
+					</li>
+					<li>
+						<a href="account_trading_record.html">交易记录</a>
+					</li>
+					<li>
+						<a href="account_coupon.html">优惠券</a>
+					</li>
+					<li>
+						<a href="account_invite_friend.html">邀请好友</a>
+					</li>
+					<li>
+						<a href="account_news.html">消息中心</a>
+					</li>
+					<li>
+						<a href="account_setting.html">账户设置</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--account main-->
+			<div class="home_r fr">
+
+				<!--account invest total-->
+				<div class="account_center_auto">
+					<div class="account_tit recharge_tit">
+						<h4 class="fl font_size18 cur">转账充值</h4>
+						<h4 class="fl font_size18">网银充值</h4>
+						<h4 class="fl font_size18">快捷支付</h4>
+					</div>
+					<div class="pay_wrap font_size16 clear">
+						<!--quick_pay 转账充值-->
+						<div class="recharge_one  recharge_big ">
+							<div class="pay_user_mag font_size16 clear pay_transfer">
+								<div class="pay_user_msg_one pay_transfer_tit">
+									<div class="fl">请用该银行卡转账充值：</div>
+									<label for="" class="back_icon fl">
+                                		<img src="images/account/coupon_02.png" id="bankNoImage"/>
+                            		</label>
+									<span id="bindBankCardNoBig" class="fl"></span>
+								</div>
+								<!--<div class="pay_user_msg_one clear">
+									<label for="">充值账号</label>
+									<span id="realName"></span>
+								</div>-->
+								<div class="pay_transfer_legend"><img src="images/account/u13.png" /></div>
+								<h4>请打开银行APP或网银向以下账户转账完成充值</h4>
+								<div class="pay_user_msg_one font_size16 clear">
+									<div class="pay_transfer_msg">
+										<dl>
+											<dt>收款户名：</dt>
+											<dd>中投摩根信息技术（北京）有限责任公司存管专户</dd>
+										</dl>
+										<dl>
+											<dt>收款账号：</dt>
+											<dd>8981214000000019400</dd>
+										</dl>
+										<dl>
+											<dt>收款银行：</dt>
+											<dd>海口联合农村商业银行</dd>
+										</dl>
+										<dl>
+											<dt>支行网点：</dt>
+											<dd>海口联合农商银行总行营业部</dd>
+										</dl>
+										<dl>
+											<dt>收款行地址：</dt>
+											<dd>海南省海口市</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--充值方式  网银充值-->
+						<div class="recharge_one recharge_quick bank_way_quick">
+							<div class="pay_user_mag font_size16">
+								<div class="pay_user_msg_one">
+									<label for="">充值账号</label>
+									<span id="bindBankCardNo"></span>
+								</div>
+								<div class="pay_user_msg_one">
+									<label for="">账户余额</label>
+									<span><em id="userAccount">0.00</em>元</span>
+								</div>
+
+								<div class="pay_user_msg_one">
+									<label for="">充值金额</label>
+									<input type="number" id="authAmount" value="" onkeyup="checkBlus2()" oninput="if(value.length>10)value=value.slice(0,10)">
+									<em>元</em>
+								</div>
+								<div class="pay_user_msg_one">
+									<label for="">充值方式</label>
+									<input type="text" disabled="disabled" value="钱宝支付">
+								</div>
+
+							</div>
+							<div class="pay_btn pay_auth_btn" id="pay_auth_btn">立即充值</div>
+							<div class="error_msg clear">金额不足</div>
+						</div>
+						<!--充值方式 快捷支付 2.0新增-->
+						<div class="recharge_one recharge_quick fast_way_quick" style="padding-top: 6px;">
+							<div class="pay_user_mag font_size16">
+								<div class="pay_user_msg_one">
+									<label for="">充值金额</label>
+									<input type="number" id="authAmountfast" value="" onkeyup="checkBlus3()" oninput="if(value.length>10)value=value.slice(0,10)">
+									<em>元</em>
+								</div>
+								<div class="pay_user_msg_one">
+									<label for="">充值方式</label>
+									<input type="text" disabled="disabled" value="快捷支付">
+								</div>
+
+							</div>
+							<div class="pay_btn pay_auth_btn" id="fast_pay_auth_btn">立即充值</div>
+							<div class="error_msg clear">金额不足</div>
+						</div>
+						<div class="recharge_msg_wrap">
+							<div class="recharge_msg_con recharge_big_con">
+								<h5>*温馨提示</h5>
+								<div class="recharge_way_msg cur">
+									<p>1.转账充值功能由银行系统自动完成，银行专户收到充值金额后自动将金额加至您在平台的账户中。</p>
+									<p>2.请务必使用在平台绑定的银行卡进行转账，否则将导致资金挂账，挂账资金退款时间依赖银行流程，需1-3个工作日到账;</p>
+									<p>3. 单笔充值金额大于等于5000元时，建议使用转账充值；</p>
+									<p>4.请前往平台绑定银行卡的银行APP中的“转账汇款”功能完成转账操作，或者前往银行大厅人工向转账充值专户充值或者用ATM转账;</p>
+									<p>5.充值到账时间大概在60分钟，请耐心等待，充值结果会发送短信通知;</p>
+									<p>6.所有资金均由第三方银行存管;</p>
+									<p>7.请注意您的银行卡充值限制，以免造成不便;</p>
+									<p>8.如有疑问请与我们的客服联系，客服电话：400-666-9068。</p>
+								</div>
+								<div class="recharge_way_msg ">
+									<p>1、单笔充值金额大于等于5000元时，建议使用转账充值；</p>
+									<p>2.所有资金均由第三方银行存管。 </p>
+									<p>3.请注意您的银行卡充值限制,以免造成不便。
+										<p>4.充值过程中可能会出现5~30分钟到账情况,请耐心等待。</p>
+										<p>5.如有疑问请与我们的客服联系,客服电话:400-666-9068。</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--recharge_mask-->
+			<div class="mask_drop"></div>
+			<div id="prepositPay">
+				<form id="webPayBillForm" action="https://yintong.com.cn/payment/bankgateway.htm" target="_blank" method="post">
+					<input type="hidden" name="version" value="1.0" />
+					<input type="hidden" name="oid_partner" />
+					<input type="hidden" name="user_id" />
+					<input type="hidden" name="sign_type" />
+					<input type="hidden" name="sign" />
+					<input type="hidden" name="busi_partner" />
+					<input type="hidden" name="no_order" />
+					<input type="hidden" name="dt_order" />
+					<input type="hidden" name="name_goods" />
+					<input type="hidden" name="info_order" />
+					<input type="hidden" name="money_order" />
+					<input type="hidden" name="notify_url" />
+					<input type="hidden" name="url_return" />
+					<input type="hidden" name="userreq_ip" />
+					<input type="hidden" name="url_order" />
+					<input type="hidden" name="valid_order" />
+					<input type="hidden" name="timestamp" />
+					<input type="hidden" name="risk_item" />
+					<input type="hidden" name="pay_type" />
+					<input type="hidden" name="bank_code" />
+					<input type="hidden" name="back_url" />
+				</form>
+			</div>
+			<div class="mask_msg_pay">
+				<div class="mask_msg_pay_con">
+					<h3>充值完成</h3>
+					<p>进行充值时，因不同银行网银的转账时间不同，充值时间会有所延迟，请耐心等待3~5分钟后，刷新查看账户余额。如果超过一个小时后，仍未充值成功，请与我们客服联系<span>(400-666-9068)</span></p>
+					<ul>
+						<li>
+							<a href="account_home.html">充值成功</a>
+						</li>
+						<li class="cur">
+							<a href="https://a1.7x24cc.com/phone_webChat.html?accountId=N000000003539&chatId=43fea77f-27c5-4298-a73c-4291941961ce" target="_blank">遇见问题</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/account_recharge.js"></script>
+
+
+</html>

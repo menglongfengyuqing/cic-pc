@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台—中投摩根-账户—修改手机号</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/account.css" />
+		<link rel="stylesheet" type="text/css" href="css/home.min.css" />
+	</head>
+
+	<body>
+
+		<div class="home_wrap con_wrap home_overhidden">
+			<!--account_nav -->
+			<div class="home_l fl">
+				<ul>
+					<li>
+						<a href="account_home.html">账户总览</a>
+					</li>
+					<li>
+						<a href="account_invest.html">我的出借</a>
+					</li>
+					<li>
+						<a href="account_trading_record.html">交易记录</a>
+					</li>
+					<li>
+						<a href="account_coupon.html">优惠券</a>
+					</li>
+					<li>
+						<a href="account_invite_friend.html">邀请好友</a>
+					</li>
+					<li>
+						<a href="account_news.html">消息中心</a>
+					</li>
+					<li class="cur">
+						<a href="account_setting.html">账户设置</a>
+					</li>
+				</ul>
+			</div>
+			<!--account main-->
+			<div class="home_r fr bg_white">
+				<!--account invest total-->
+				<div class="home_r_tab news_tab">
+					<ul>
+						<li class="fl">修改手机号</li>
+					</ul>
+				</div>
+				<div class="account_center setting_center">
+					<div class="setting_phone_wrap phone_setting_new">
+
+						<div class="setting_phone_step">
+							<div class="phone_step_one phone_step font_size14 ">
+								<div class="setting_phone_group phone_old">
+									<label for="" class="fl">原手机号</label>
+									<input type="text" name="" id="myphone" value="" class="fl" readonly="readonly" />
+								</div>
+								<div class="setting_phone_group">
+									<label for="" class="fl">图形验证码</label>
+									<div class="rel fl">
+										<input type="text" placeholder="请输入验证码" class="fl" id="code" />
+										<input type="hidden" id="codeKey" value="">
+										<span id="pictureCodeR" onclick="getPictureCode()"></span>
+									</div>
+								</div>
+								<div class="setting_phone_group ">
+									<label for="" class="fl">短信验证码</label>
+									<div class="rel fl colorCom">
+										<input type="text" name="" id="oldCode" value="" class="fl" placeholder="请输入短信验证码" />
+										<span id="getCode" onclick="sendMessage()">获取验证码</span>
+									</div>
+								</div>
+								<div class="setting_mail_group">
+									<input type="submit" name="" id="nextStep" onclick="nextStep()" value="下一步" class="lastInput" />
+								</div>
+
+							</div>
+
+							<div class="phone_step_two phone_step">
+								<div class="setting_phone_group">
+									<label for="" class="fl">新手机号码</label>
+									<input type="text" name="" id="newMobile" value="" class="fl" placeholder="请输入新手机号码" />
+								</div>
+								<div class="setting_phone_group">
+									<label for="" class="fl">图形验证码</label>
+									<div class="rel fl">
+										<input type="text" placeholder="请输入验证码" class="fl" id="codeTwo" />
+										<input type="hidden" id="codeKeyTwo" value="">
+										<span id="pictureCodeRTwo" onclick="getPictureCodeTwo()"></span>
+									</div>
+								</div>
+								<div class="setting_phone_group ">
+									<label for="" class="fl">短信验证码</label>
+									<div class="rel fl colorCom">
+										<input type="text" name="" id="oldCodeTwo" value="" class="fl" placeholder="请输入短信验证码" />
+										<span id="getCodeTwo" onclick="sendMessageTwo()">获取验证码</span>
+									</div>
+								</div>
+								<div class="setting_mail_group">
+									<input type="submit" name="" id="" onclick="bindPhone()" value="确定" class="fl lastSure" />
+								</div>
+							</div>
+							<div class="setting_success font_size14">
+								<div class="img">
+									<img src="images/icon/invest_static_success.png" class="fl" />
+									<span>修改手机号成功！</span>
+								</div>
+								<p><em id="second">3</em>S后重新登录</p>
+								<div class="setting_mail_group submit_mail">
+									<input type="submit" name="" id="" value="重新登录" class="active" onclick="logout()" />
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<input type="hidden" name="username" id="username" value="" />
+		<div class="mask_drop"></div>
+		<div class="mask_tip"> </div>
+	</body>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/account_setting_phone.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>
+
+</html>

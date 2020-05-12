@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台——中投摩根_账户设置</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/data.css">
+		<link rel="stylesheet" type="text/css" href="css/home.min.css" />
+
+	</head>
+
+	<body>
+		<div class="home_wrap con_wrap">
+			<div class="home_l fl">
+				<ul>
+					<li class="cur">
+						<a href="account_home.html">账户总览</a>
+					</li>
+					<li>
+						<a href="account_invest.html">我的出借</a>
+					</li>
+					<li>
+						<a href="account_trading_record.html">交易记录</a>
+					</li>
+					<li>
+						<a href="account_coupon.html">优惠券</a>
+					</li>
+					<li>
+						<a href="account_invite_friend.html">邀请好友</a>
+					</li>
+					<li>
+						<a href="account_news.html">消息中心</a>
+					</li>
+					<li>
+						<a href="account_setting.html">账户设置</a>
+					</li>
+				</ul>
+			</div>
+			<div class="home_r fr">
+				<div class="account_info">
+					<div class="account_info_l fl">
+						<img src="images/account/head.png" class="fl" id="userImg" onerror="imgError(this);" />
+						<div class="fr">
+							<h4 id="username"></h4>
+							<h5><b>安全等级</b>
+							<span><i id="levelWidth"></i></span><b id="safeLevel"></b>
+						</h5>
+						</div>
+					</div>
+					<div class="account_handle fr">
+						<!-- <a href="javascript:;" class="cur" id="recharge" onclick="recharge()">充值</a> -->
+						<a href="javascript:;" id="withdraw" onclick="withdraw()">提现</a>
+					</div>
+					<div class="account_num clear">
+						<dl class="fl">
+							<dt>账户总额（元）</dt>
+							<dd id="total_amount">0.00</dd>
+						</dl>
+						<span>=</span>
+						<dl class="fl">
+							<dt>待收本金（元）</dt>
+							<dd id="in_the_investment_amount">0.00</dd>
+						</dl>
+						<span>+</span>
+						<dl class="fl">
+							<dt>待收利息（元）</dt>
+							<dd id="regular_due_interest">0.00</dd>
+						</dl>
+						<span>+</span>
+						<dl class="fl">
+							<dt>可用余额（元）</dt>
+							<dd id="available_amount">0.00</dd>
+						</dl>
+						<span>+</span>
+						<dl class="fl">
+							<dt>冻结金额（元）</dt>
+							<dd id="freeze_amount">0.00</dd>
+						</dl>
+					</div>
+				</div>
+				<!--account invest total-->
+				<div class="account_center">
+					<div class="account_tit">
+						<h4 class="fl">出借总览</h4>
+					</div>
+					<div class="cavans_wrap">
+
+						<div class="account_canvas fl">
+							<div id="main"></div>
+							<div class="rate_cic"></div>
+						</div>
+						<div class="cavans_data fl">
+							<dl class="fl">
+								<dt>项目类型</dt>
+								<dd class="border_chain">供应链</dd>
+								<dd class="border_safe">安心投</dd>
+							</dl>
+							<dl class="fl">
+								<dt>累计出借</dt>
+								<dd id="investSupply">0.00元</dd>
+								<dd id="investSafe">0.00元</dd>
+							</dl>
+							<dl class="fl">
+								<dt>累计利息</dt>
+								<dd id="sumSupply">0.00元</dd>
+								<dd id="sumSafe">0.00元</dd>
+
+							</dl>
+						</div>
+
+					</div>
+				</div>
+				<!--account Return calendar-->
+				<div class="calendar_wrap">
+					<h4>回款日历</h4>
+					<div class="account-box">
+
+						<h2 class="account-title">
+							<div class="fl backTip">回款日</div>
+				            <div class="clearfix payment_tit fr">
+				              <div class="f-btn-jian left"></div><div class=" f-riqi"><span class="f-year">1</span>年<span class="f-month">2</span>月</div><div class="f-btn-jia right"></div><!-- 一定不能换行-->
+				            </div>
+       					 </h2>
+
+						<div class="f-rili-table clear">
+
+							<div class="f-rili-head celarfix">
+								<div class="f-rili-th">周日</div>
+								<div class="f-rili-th">周一</div>
+								<div class="f-rili-th">周二</div>
+								<div class="f-rili-th">周三</div>
+								<div class="f-rili-th">周四</div>
+								<div class="f-rili-th">周五</div>
+								<div class="f-rili-th">周六</div>
+								<div class="clear"></div>
+							</div>
+
+							<div class="f-tbody clearfix">
+
+							</div>
+
+						</div>
+						<!--回款计划-->
+						<div class="payment_msg">
+							<ul>
+								<li class="fl">
+									<span>当日回款本息(元):</span>
+									<em id="interestOnTheDay"></em>
+								</li>
+								<li class="fl" style="text-align: right;padding-right: 23px;">
+									<span>当月回款本息(元):</span>
+									<em id="interestOnTheMonth"></em>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="hidden" name="last" id="last" value="" />
+			<input type="hidden" name="pageNo" id="pageNo" value="" />
+			<input type="hidden" name="s_date" value="" />
+			<input type="hidden" name="e_date" value="" />
+		</div>
+		<div class="mask_project">
+			<div class="paymet_item_con">
+				<div class="tab">
+					<ul>
+						<li class="fl">项目名称</li>
+						<li class="fl">回款本息(元)</li>
+						<li class="fl">剩余本息(元)</li>
+					</ul>
+				</div>
+				<div class="project_table">
+					<ul id="investDetail"></ul>
+
+				</div>
+			</div>
+		</div>
+		<div class="mask_drop"></div>
+		<div class="mask_cgb">
+			<span class="close_mask_btn"></span>
+			<img src="images/account/cgb_bg.png" />
+			<div id="dredgeManage" >
+			<h4>开通存管账户资金受监管</h4>
+			<a href="account_setting_bankcard.html">马上开通</a>
+			</div>
+			<div id="dredgeCard">
+			<h4>请绑定银行卡</h4>
+			<a href="account_setting_bankcard.html">马上绑定</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js "></script>
+	<script type="text/javascript" src="js/jquery.cookie.js "></script>
+	<script type="text/javascript" src="js/common.js "></script>
+	<script type="text/javascript" src="js/1-6-10.esl.js "></script>
+	<script type="text/javascript" src="js/account_home.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript">
+		var startX = startY = endX = endY = 0;
+		$("#investDetail").bind('touchstart', function(event) {
+			var touch = event.originalEvent.changedTouches[0];
+			//滑动起点的坐标
+			startX = touch.pageX;
+			startY = touch.pageY;
+		});
+		$("#investDetail").bind("touchmove", function(event) {
+			var touch = event.originalEvent.changedTouches[0];
+			//手势滑动时，手势坐标不断变化，取最后一点的坐标为最终的终点坐标
+			endX = touch.pageX;
+			endY = touch.pageY;
+		})
+		$("#investDetail").bind("touchend", function(event) {
+			var distanceX = endX - startX,
+				distanceY = endY - startY;
+			//移动端设备的屏幕宽度
+			var clientHeight = document.documentElement.clientHeight;
+			//判断是否滑动了，而不是屏幕上单击了
+			if(startY != Math.abs(distanceY)) {
+				if(Math.abs(distanceY) > $("#investDetail").width() * 0.2) {
+					distanceY > 0 ? someAction1() : someAction2();
+				}
+
+			}
+			startX = startY = endX = endY = 0;
+		})
+
+		var dataArr = {};
+		var pageNo = 1;
+		var pageSize = 100;
+		var dateSellected;
+		var isSend = true; //是否请求加载图片
+		$(document).ready(function() {
+			getNewUserInterestCount();
+
+		});
+
+		function getNewUserInterestCount() {
+			$.ajax({
+				url: ctxpath + "/user/getNewUserInterestCount",
+				type: "post",
+				dataType: "json",
+				data: {
+					from: '1',
+					token: token
+				},
+				success: function(result) {
+
+					if(result.state == '0') {
+						var data = result.data;
+
+						if(data != null && data.length > 0) {
+
+							$.each(data, function(index, item) {
+
+								dataArr[index] = item;
+							});
+
+							getNextMouth();
+						} else {
+							//							var d = new Date();
+							//							var month = d.getMonth() + 1 < 10 ? ("0" + (d.getMonth() + 1)) : d.getMonth() + 1;
+							//							var strDate = d.getFullYear() + "-" + month + "-" + d.getDate();
+							//							getRepayStr(strDate);
+							document.getElementById("interestOnTheDay").innerText = " 0.00";
+							document.getElementById("interestOnTheMonth").innerText = "0.00";
+							$(".payment_null").show();
+
+						}
+					} else if(result.state == '4') {
+						logout();
+					} else {
+						console.log(result.message);
+					}
+				}
+			});
+		}
+
+		function someAction1() {
+			return false;
+		}
+
+		function someAction2() {
+			pageNo = document.getElementById("pageNo").value;
+			var last = document.getElementById("last").value;
+			if(parseInt(pageNo) > parseInt(last)) {
+				//     			$(".error_msg_wrap p").html("没有更多数据");
+				//				$(".error_msg_wrap p").css("visibility", "visible");
+				//     			setTimeout("getMsg()",2000);
+			} else {
+				if(isSend) {
+					getInvestDetailList(dateSellected, pageNo, pageSize);
+
+				}
+
+			}
+		}
+
+		function getNextMouth() {
+
+			$(".payment_null").show();
+			document.getElementById("interestOnTheDay").innerText = "0.00";
+			// 获取鼠标点击之后当前页面年月
+			var mydate = new Date();
+			var curMonth = mydate.getMonth() + 1;
+			var curYear = mydate.getFullYear();
+			var curDay = mydate.getDate();
+			var newyear = $(".f-year").text();
+			var newMonth = $(".f-month").text();
+			if(curYear == newyear && curMonth == newMonth) {
+				$(".f-btn-jian ").hide();
+			}
+			if(newMonth.length == 1) {
+				newMonth = "0" + newMonth;
+			}
+
+			//			dataArr = unique(dataArr);
+
+			if(dataArr != null) {
+				var totalInterest = 0.00;
+				$.each(dataArr, function(index, item) {
+					/*
+					 *  
+					 */
+					var data = item[0].split("-");
+					var dataYear = data[0];
+					var dataMonth = data[1];
+					var dataDay = data[2];
+					var interest = item[1];
+					if(dataDay.indexOf(0) == 0) {
+						dataDay = dataDay.substr(1);
+					}
+					if(dataYear == newyear && dataMonth == newMonth) {
+						var strNumber = parseFloat(interest);
+						totalInterest += strNumber;
+						var li = $(".f-li");
+						$.each(li, function(index, item2) {
+							var htmlstr = document.getElementById("interestOnTheDay");
+							$(".f-td").click(function() {
+								$(".payment_null").show();
+								$("#investDetail").html("").hide();
+								$(".f-number").removeClass("cur");
+								$(".f-table-msg").html("").hide();
+								document.getElementById("interestOnTheDay").innerText = "0.00";
+
+							});
+
+							if(item2.innerText == dataDay) {
+								this.className = "f-td f-li f-number";
+								this.onclick = function(e) {
+									e.stopPropagation();
+									//htmlstr.innerText = formatCurrency(interest);
+									this.className = "f-td f-li f-number cur";
+									pageNo = 1;
+									$("#investDetail").html("");
+									var interestThisDay = 0;
+									var lis = this.getElementsByTagName("input");
+									$.each(lis, function(index3, item3) {
+										interestThisDay += parseFloat(item3.value);
+									})
+									$("#interestOnTheDay").html(parseFloat(interestThisDay).toFixed(2));
+									getInvestDetailList(item[0], pageNo, pageSize);
+								}
+							}
+
+						});
+
+					}
+				});
+				$(".f-tbody .f-td").each(function(index, item) {
+					var $this = $(this);
+					if(item.className == "f-td f-li f-number") {
+						var dom = "<div class='f-yuan'></div>";
+						var mask = "<div class='f-table-msg'></div>";
+						$this.append(dom, mask);
+					}
+				});
+				document.getElementById("interestOnTheMonth").innerText = formatCurrency(totalInterest);
+			} else {
+				document.getElementById("interestOnTheDay").innerText = "0.00";
+				document.getElementById("interestOnTheMonth").innerText = " 0.00";
+				$(".f-default").click(function() {
+					$("#investDetail").html("");
+					$(".payment_null").show();
+				});
+
+			}
+		}
+
+		function getInvestDetailList(date, pageNo, pageSize) {
+			$("#investDetail").html("");
+			$(".f-td.cur").children(".f-table-msg").html("").hide();
+			isSend = false;
+			dateSellected = date;
+			$.ajax({
+				url: ctxpath + "/user/findNewUserRepayPlanStatistical",
+				type: "post",
+				dataType: "json",
+				data: {
+					from: '2',
+					token: token,
+					pageNo: pageNo,
+					pageSize: pageSize,
+					nowDate: date
+				},
+				success: function(result) {
+
+					if(result.state == '0') {
+						document.getElementById("last").value = result.data.pageCount;
+						document.getElementById("pageNo").value = result.data.pageNo + 1;
+						var plans = result.data.plans;
+						$(".payment_null").hide();
+
+						if(plans != null && plans.length > 0) {
+							var str = "";
+
+							var arr = [];
+
+							$.each(plans, function(index, item) {
+								interestOnTheDay = item.nowRepayAmount;
+								arr.push(interestOnTheDay);
+								if(item.projectSn == "" || null == item.projectSn) {
+									str += '<li><span class="fl">' + item.projectName + '</span><span class="fl">' + item.nowRepayAmount + '</span><span class="fl">' + item.remainingRepayAmount + '</span></li>';
+								} else {
+									str += '<li><span class="fl">' + item.projectName + '(' + item.projectSn + ')</span><span class="fl"> ' + item.nowRepayAmount + '</span><span class="fl">' + item.remainingRepayAmount + '</span></li>';
+								}
+
+							});
+
+							var total = eval(arr.join('+'));
+							total = formatCurrency(total);
+							$(".mask_project #investDetail").html(str).show();
+							console.log(str + "cehsi");
+							var htmPro = $(".mask_project").html();
+							$(".f-table-msg").html("").hide();
+							$(".f-td.cur").children(".f-table-msg").html(htmPro).show();
+
+							isSend = true;
+							console.log(arr);
+							$("#interestOnTheDay").html(total);
+						} else {
+							//无
+							$(".mask_project #investDetail").html("").hide();
+						}
+					} else {
+						mask_login();
+					}
+				}
+			});
+		}
+
+		// 数组去重
+		function unique(arr) {
+			var result = [],
+				hash = {};
+			for(var i = 0, elem;
+				(elem = arr[i]) != null; i++) {
+				if(!hash[elem]) {
+					result.push(elem);
+					hash[elem] = true;
+				}
+			}
+			return result;
+		}
+	</script>
+
+</html>

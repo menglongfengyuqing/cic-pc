@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台—中投摩根-积分商城-我的奖品</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/account.css" />
+		<style>
+			.copy_link span {
+				position: relative;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--main_contain-->
+		<div class="main_contain">
+			<!--account_nav -->
+			<div class="account_nav_wrap">
+				<div class="account_nav font_size18">
+					<ul>
+						<li class="fl">
+							<a href="account_home.html">账户总览</a>
+						</li>
+						<li class="fl cur">
+							<a href="account_user_privilege.html">用户特权</a>
+						</li>
+						<li class="fl">
+							<a href="account_news.html">消息中心</a>
+						</li>
+						<li class="fl">
+							<a href="account_setting.html">账户设置</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--integral_main-->
+			<div class="integral_mall_win_wrap user_privilege_coupon">
+					<h4 class="tit_coupon">我的优惠券</h4>
+				
+				<div class="coupon_tab font_size18">
+					<ul>
+						<li class="fl">
+							<a href="javascript:accountCoupon(1,1,3);" class="cur">未使用优惠券</a>
+						</li>
+						<li class="fl">
+							<a href="javascript:accountCoupon(2,1,3);">已使用优惠券</a>
+						</li>
+						<li class="fl">
+							<a href="javascript:accountCoupon(3,1,3);">已失效优惠券</a>
+						</li>
+					</ul>
+				</div>
+				<!--static coupon_using coupon_used coupon_over -->
+				<div class="win_coupon">
+
+					<div class="coupon_li">
+						<ul id="couponList"></ul>
+					</div>
+					<!--light pagination-->
+					<div class="pagination_holder clearfix">
+						<div id="light-pagination_coupon" class="pagination light_theme simple_pagination light-theme simple-pagination">
+						
+						</div>
+					</div>
+					<div class="invest_item_none" id="noCoupon">暂无优惠券</div>
+				</div>
+
+			</div>
+			<!--invite_friend-->
+			<div class="user_privilege_con">
+				<div class="account_tit">
+					<h4 class="font_size18">我的邀请</h4>
+
+				</div>
+				<div class="data">
+					<div class="account_total fl">
+						<span class="font_size22" id="countusers">0</span>
+						<b class="font_size16">邀请人数</b>
+					</div>
+					<div class="account_balance fl">
+						<span class="font_size22" id="userinvest">0.00元</span>
+						<b class="font_size16">好友出借</b>
+
+					</div>
+					<div class="account_income fl">
+						<span class="font_size22" id="sumbrokerage">3.00分</span>
+						<b class="font_size16">总积分</b>
+					</div>
+				</div>
+			</div>
+			<!--invite_friend money-->
+			<div class="user_privilege_con">
+				<div class="account_tit">
+					<h4 class="font_size18">邀请好友得积分</h4>
+				</div>
+
+				<div class="invite_way font_size16">
+					<dl class="fl">
+						<dt><img src="images/account/invite_01.png"/></dt>
+						<dd>分享链接给好友</dd>
+					</dl>
+					<dl class="fl">
+						<dt><img src="images/account/invite_02.png"/></dt>
+						<dd>好友通过链接注册并完成出借</dd>
+					</dl>
+					<dl class="fl">
+						<dt><img src="images/account/invite_03.png"/></dt>
+						<dd>您即可获得奖励</dd>
+					</dl>
+
+				</div>
+				<div class="copy_link">
+					<input type="text" name="text" value="https://www.cicmorgan.com/regist.html?id=729508099752333312" readonly="readonly" />
+					<span><a href="javascript:;" id="copyUrl" style="display: block; width: 200px;height: 40px;"></a></span>
+				</div>
+			</div>
+			<!--invite-->
+			<div class="user_privilege_con">
+				<div class="account_tit">
+					<h4 class="font_size18">奖励详情</h4>
+				</div>
+				<div class="payment_wrap font_size16">
+					<table>
+						<tbody id="transDetails">
+							<tr>
+								<th>序列</th>
+								<th>好友</th>
+								<th>好友出借</th>
+								<th>我的奖励</th>
+							</tr>						
+						</tbody>
+					</table>
+					<!--没有持有的项目-->
+					<div class="invest_item_none" style="display: none;" id="noFriends">您邀请的好友还未出借</div>
+
+					<!--light pagination-->
+					<div class="pagination_holder clearfix">
+						<div id="light-pagination_02" class="pagination light_theme simple_pagination light-theme simple-pagination">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/jquery.zclip.min.js"></script>
+	<script type="text/javascript" src="js/account_user_privilege.js"></script>
+	<script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+</html>

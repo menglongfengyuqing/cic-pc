@@ -1,0 +1,219 @@
+body {
+	background: #F7F7F7
+}
+
+.account_tab_li,
+.help_tab {
+	width: 100%;
+	margin-top: 3px;
+	background: #fff
+}
+
+.account_tab_li ul,
+.help_tab ul {
+	width: 1002px;
+	margin: 0 auto;
+	overflow: hidden
+}
+
+.account_tab_li li,
+.help_tab li {
+	margin-left: 36px;
+	line-height: 64px
+}
+
+.account_tab_li li.cur a,
+.help_tab li.cur a {
+	color: #a01e3f
+}
+
+.account_tab_li li.cur a,
+.help_tab li.cur a {
+	color: #a01e3f
+}
+
+.account_tab_li li a,
+.help_tab li a {
+	color: #5a5a5a
+}
+
+.help_home_wrap {
+	width: 1002px;
+	margin: 0 auto;
+	overflow: hidden
+}
+
+.help_account,
+.help_invest_kind,
+.help_question {
+	background: #fff;
+	padding: 30px 0;
+	overflow: hidden;
+	margin: 40px auto;
+	color: #666666;
+	width: 932px
+}
+
+.hlep_tit {
+	border-bottom: 1px solid #dcdcdc;
+	margin-bottom: 10px;
+	overflow: hidden;
+	padding: 0 38px;
+	line-height: 60px;
+	font-weight: normal
+}
+
+.help_invest_kind ul {
+	overflow: hidden;
+	padding: 0 38px
+}
+
+.help_invest_kind ul li {
+	width: 210px;
+	overflow: hidden;
+	text-align: center;
+	padding-top: 40px
+}
+
+.help_invest_kind ul li a {
+	display: block
+}
+
+.help_invest_kind ul li a span {
+	color: #6f6f6f;
+	font-size: 16px;
+	display: block;
+	line-height: 2;
+	margin-top: 30px
+}
+
+.help_account .account_li {
+	overflow: hidden;
+	padding: 0 38px;
+	width: auto;
+}
+
+.account_li dl {
+	width: 14.28%;
+	text-align: center;
+	margin: 50px 0
+}
+
+.account_li dl dt {
+	height: 42px;
+	margin-bottom: 10px
+}
+
+.account_li dl dd {
+	color: #666666;
+	line-height: 2
+}
+
+.account_li dl dd a:hover {
+	color: #a01e3f
+}
+
+.question_usual {
+	overflow: hidden;
+	padding: 0 38px
+}
+
+.question_usual li {
+	width: 33.333%;
+	list-style-type: square
+}
+
+.question_usual li:hover,
+.question_usual li:hover a {
+	color: #a01e3f
+}
+
+.question_usual li a {
+	line-height: 50px;
+	font-size: 16px;
+	color: #666666
+}
+
+.help_account_wrap {
+	background: #fff;
+	margin: 40px 0;
+	overflow: hidden
+}
+
+.account_tab_li ul {
+	border-bottom: 1px solid #dcdcdc
+}
+
+.account_group {
+	padding: 0 36px;
+	margin-bottom: 20px;
+	margin-top: 20px
+}
+
+.account_one .account_tit {
+	font-size: 14px;
+	color: #666;
+	line-height: 50px;
+	cursor: pointer;
+	position: relative
+}
+
+.account_one .account_tit:after {
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 36px;
+	width: 16px;
+	height: 10px;
+	background: url("../images/help/sprit.png") no-repeat 0 -11px
+}
+
+.account_one .account_tit.cur:after {
+	background: url("../images/help/sprit.png") no-repeat 0 0
+}
+
+.account_answer {
+	padding: 10px 33px;
+	overflow: hidden;
+	background: #f9f9f9;
+	display: none
+}
+
+.account_answer p {
+	color: #999;
+	line-height: 30px
+}
+
+.account_one {
+	display: none
+}
+
+.account_login {
+	display: block
+}
+.associated_Media li {
+    width: 20%;
+    text-align: center;
+    margin-right: 30px;
+}
+.associated_Media{
+padding: 40px;
+}
+.associated_Media li a{
+	display: block;
+}
+.associated_Media li img{
+	width: 100%;
+	overflow: hidden;
+}
+.help_account .account_li a {
+    display: block;
+    width: 88px;
+    height: 34px;
+     background: #fff; 
+    line-height: 34px;
+     color: #333; 
+    font-size: 14px;
+    border-radius: 4px;
+
+}

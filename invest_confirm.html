@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>出借_出借列表_网络投借款平台_中投摩根_确认出借</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/invest_new.css" />
+	</head>
+
+	<body class="">
+
+		<!--main_contain-->
+		<div class="main_contain invets_details_main confirm_main">
+
+			<div class="invest_confirm_wrap con_wrap ">
+				<div class="invest_confirm_tit">确认出借</div>
+				<div class="invest_confirm_con">
+					<ul>
+						<li><span>出借项目:</span> <em id="pro_name"></em></li>
+						<li><span>年化利率:</span> <em id="pro_rate"></em></li>
+						<li><span>项目期限:</span> <em id="pro_span"></em></li>
+						<li><span>结束日期:</span> <em id="end_date"></em></li>
+						<li><span>出借金额:</span> <em id="amount"></em></li>
+
+						<li id="coupons">
+							<span>优惠券:</span>
+							<div class="coupon_list_wrap">
+								<!--check-->
+								<div id="awardsValue" class="">
+
+									<!--<b>已选择2张（最优方案）</b>
+								<i> 抵扣100元&nbsp;></i>-->
+
+								</div>
+								<div class="coupon_list">
+									<ul>
+										<div class="cpupon_wrap">
+										<div id="awardsRecommend">
+											<li class="cur">10元抵用券 <b></b></li>
+											<li>10元抵用券 <b></b></li>
+										</div>
+										<div id="awardsNormal">
+
+										</div>
+										</div>
+										<li id="vouidOk">确定</li>
+									</ul>
+								</div>
+							</div>
+
+						</li>
+						<li class="invset_sy"><span>预期出借利息:</span> <em id="invest_earnings"></em></li>
+						<li><span>可用余额:</span> <em id="availableAmount"></em></li>
+						<li><span>实际支付:</span> <em id="payAmount"></em></li>
+					</ul>
+					<h4 class="login_checkmsg agreement">
+						<div class="clear"><b class="fl"><input type="checkbox" id="agreement"></b><span class="fl">我已阅读并同意<a href="doc/scf.pdf" target="_blank" id="agreementFile" onclick="_czc.push(['_trackEvent', '确认出借', '点击', '出借协议']);"><<出借协议>></a><a href="zt_protocol_risk.html" target="_blank"  onclick="_czc.push(['_trackEvent', '确认出借', '点击', '出借协议']);"><<出借人网络借贷风险提示>></a><a href="zt_protocol_prohibit.html" target="_blank"  onclick="_czc.push(['_trackEvent', '确认出借', '点击', '出借协议']);"><<出借人网络借贷禁止性行为提示>></a>	<a href="zt_electronic_signature.html" target="_blank"  onclick="_czc.push(['_trackEvent', '确认出借', '点击', '出借协议']);"><<电子签章委托授权书>></a>	</span></div>
+					</h4>
+					<p>
+						<span id="confirm_the_investment">确认出借</span>
+					</p>
+					<!--<input class="error_msg" />-->
+					<p class="error_msg"></p>
+
+				</div>
+				<div class="invest_foot con_wrap">
+					<p><img src="images/invest/icon_bank.png"></p>
+					<p>
+						<a href="zt_protocol_risk.html" target="_blank">市场有风险&nbsp;&nbsp;出借需谨慎。</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- 隐藏域(begin). -->
+			<!-- 项目id. -->
+			<input type="hidden" id="temp_project_id" />
+			<!-- 项目满标日期. -->
+			<input type="hidden" id="temp_countdowndate" />
+			<!-- 项目名称. -->
+			<input type="hidden" id="temp_pro_name" />
+			<!-- 项目年化利息. -->
+			<input type="hidden" id="temp_pro_rate" />
+			<!-- 项目期限. -->
+			<input type="hidden" id="temp_pro_span" />
+			<!-- 项目起投金额. -->
+			<input type="hidden" id="temp_pro_min_amount" />
+			<!-- 是否使用抵用券. -->
+			<input type="hidden" id="temp_isCanUseCoupon" />
+			<!-- 是否使用加息券. -->
+			<input type="hidden" id="temp_isCanUsePlusCoupon" />
+			<!-- 放款日期. -->
+			<input type="hidden" id="temp_loan_date" />
+			<!-- 出借日期距离放款日期的天数. -->
+			<input type="hidden" id="temp_days" />
+			<!-- 可用余额. -->
+			<input type="hidden" id="temp_available_amount" />
+			<!-- 预期出借利息. -->
+			<input type="hidden" id="temp_invest_earnings" />
+			<!-- 隐藏域(end). -->
+		</div>
+
+		<!--优惠券选择条件不足-->
+		<div class="counpon_not_enough">
+			<h4 class="font_size28">抵扣金额最多不超过元</h4>
+		</div>
+		<!--invest_confrim_mask-->
+		<div class="mask_drop"></div>
+		<div class="mask_msg_pay">
+			<div class="mask_msg_pay_con">
+				<h3>出借完成</h3>
+				<p>进行确认出借时，需跳转至【海口联合农商银行】资金存管系统，进行交易密码确认，未出借成功，请与我们客服联系<span>(400-666-9068)</span></p>
+				<ul>
+					<li>
+						<a href="account_trading_record.html">出借成功</a>
+					</li>
+					<li class="cur">
+						<a href="https://a1.7x24cc.com/phone_webChat.html?accountId=N000000003539&chatId=43fea77f-27c5-4298-a73c-4291941961ce" target="_blank">遇见问题</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/invest_confirm.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+</html>

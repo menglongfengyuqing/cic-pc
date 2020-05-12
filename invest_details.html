@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>出借_出借列表_网络投借款平台_中投摩根-项目详情</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+		<link rel="stylesheet" type="text/css" href="css/invest.css" />
+		<link rel="stylesheet" type="text/css" href="css/invest_new.css" />
+		<style>
+			.star_tip:hover:after {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--main_contain-->
+		<div class="main_contain invets_details_main">
+			<div class="con_wrap">
+				<div class="invest_details_data" id="projectTypeTop">
+					<div class="invest_info fl">
+						<div class="invest_d_tit">
+							<h3><span id="project_name" class="fl"></span><em class="fl">按月付息,到期还本</em> <a target="_blank" href="doc/axt.pdf" class="fr C_red1" id="agreementFile"  onclick="_czc.push(['_trackEvent', '出借详情-顶部左半部分', '点击', '协议范本']);">协议范本&gt;</a></h3>
+						</div>
+						<div class="invest_item_data">
+
+							<div class="percent fl">
+								<span class="rate" id="projectRate"></span>
+								<div class="text font_size14">年化利率</div>
+							</div>
+							<div class="limit fl">
+								<span id="projectspan"></span>
+								<div class="text font_size14">出借期限</div>
+							</div>
+							<div class="money fl">
+								<span id="projectAmount"></span>
+								<div class="text font_size14">借款总金额</div>
+							</div>
+
+						</div>
+						<div class="progress_wrap clear">
+
+							<div class="progress fr" data-percent="100">
+								<div class="outer"><span class="inner" id="persent"></span><b id="projectSchedule"></b></div>
+							</div>
+						</div>
+						<div class="item_guarantee">
+							<ul>
+								<li class="fl">海口联合农商银行存管</li>
+								<li class="fl">真实项目</li>
+								<li class="fl pd_n">4年稳定运营</li>
+							</ul>
+						</div>
+					</div>
+					<div class="invest_mask_wrap font_size14">
+						<ul>
+							<li>
+								<span class="i_title">我的余额：</span>
+								<!--no_login-->
+								<em id="loginAccount"></em>
+								<a href="###" class="recharge fr" onclick="recharge()">充值</a>
+							</li>
+							<li>
+								<span class="i_title">剩余金额：</span>
+								<em id="projectsurplus"></em>
+
+							</li>
+							<li class="invest_special_li">
+								<span class="i_title">预期利息：</span>
+								<em id="mask_expect">0.00</em>
+								<div><i onclick="_czc.push(['_trackEvent', '出借详情-顶部右半部分', '点击', '问号按钮']);"><em>预期利息=出借金额*年化利率/365*出借期限</em></i></div>
+							</li>
+							<li class="mb_no">
+								<span class="i_title">出借金额：</span>
+								<!--<input type="number" id="invest_input" min="0"
+									   placeholder="1000元起投,100元递增"
+									   onkeyup=""
+									   oninput="if(value.length>10)value=value.slice(0,10)">-->
+								<input type='text' t_value="" id="invest_input" min="0" o_value="" oninput="if(value.length>10)value=value.slice(0,10);" onkeypress="if(!this.value.match(/^[\+\-]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+\-]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="_czc.push(['_trackEvent', '出借详情-顶部右半部分', '输入', '输入金额']);if(!this.value.match(/^[\+\-]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+\-]?\d+(?:\.\d+)?)?$/))this.o_value=this.value;checkBlus()" onblur="if(!this.value.match(/^(?:[\+\-]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">
+
+							</li>
+
+							<li id="error">
+
+							</li>
+							<li class="mb_20">
+								<!--即将上 线 invest_btn_once default 不可点击default-->
+								<a href="javascript:;" class="invest_btn" id="invest_btn"></a><!-- 立即加入 -->
+								<div class="toast">项目即将上线，请耐心等待</div>
+							</li>
+
+							<li>
+								<p>
+									<a href="zt_protocol_risk.html" target="_blank">中投摩根提醒您:借贷有风险,出借需谨慎</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="invest_program_wrap">
+					<div class="program_tab">
+						<ul>
+							<li class="fl cur">
+								<a href="javascript:;" id="" onclick="_czc.push(['_trackEvent', '出借详情-下部标签', '点击', '项目介绍']);">项目介绍</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;" onclick="_czc.push(['_trackEvent', '出借详情-下部标签', '点击', '借款方信息']);">借款方信息</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;" id="windControl" onclick="_czc.push(['_trackEvent', '出借详情-下部标签', '点击', '风控情况']);">风控情况</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;" id="projectInvestList" onclick="_czc.push(['_trackEvent', '出借详情-下部标签', '点击', '出借记录']);">出借记录</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;" onclick="_czc.push(['_trackEvent', '出借详情-下部标签', '点击', '常见问题']);">常见问题</a>
+							</li>
+						</ul>
+					</div>
+					<!--login_in-->
+					<div class="program_info_space clear">
+						<div class="program_tab_con program_introduction font_size14 active">
+							<div class="program_msg_con">
+								<dl class="clear">
+									<dt class="fl">项目名称(项目编号)</dt>
+									<dd class="fl" id="project_name2"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">项目简介</dt>
+									<dd class="fl">
+										<p id="project_introduction"></p>
+									</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">借款方</dt>
+									<dd class="fl">XXXXXXXXXXXXXXX</dd>
+									<!-- <dd class="fl" id="borrowerName"></dd> -->
+								</dl>
+								<dl class="clear" id="antNo">
+									<dt class="fl">付款方</dt>
+									<dd class="fl">
+										<a href="javascript:;" id="paymentName" target="_blank" onclick="_czc.push(['_trackEvent', '出借详情-项目介绍', '点击', '付款方公司名称']);"></a>
+									</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">借款金额</dt>
+									<dd class="fl" id="projectAmount2"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">借款期限</dt>
+									<dd class="fl" id="projectSpan2"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">借款用途</dt>
+									<dd class="fl">
+										<p id="project_useful"></p>
+									</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">募集期限</dt>
+									<dd class="fl">不超过20个工作日</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">年化利率</dt>
+									<dd class="fl" id="project_rate2"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">起息时间</dt>
+
+									<dd class="fl" id="interestDate"></dd>
+								</dl>
+								<dl class="clear repaytype_dl">
+									<dt class="fl">还款方式</dt>
+									<dd class="fl"><span id="repaytype" class="fl repaytype"></span></dd>
+								</dl>
+								<dl class="clear" style="overflow: initial!important">
+									<dt class="fl">项目评级</dt>
+									<dd class="fl">
+										<div class="star fl" id="star"></div>
+										<div class="star_tip fl"><i>星级越高，风险等级越低</i>(内部评级,仅供参考)<span></span></div>
+									</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">费用说明</dt>
+									<dd class="fl">加入费用：0元；&nbsp;&nbsp;提现费用：每月两次免费机会，两次以上1元/笔</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">出借规则</dt>
+									<dd class="fl"><span id="loanMoney"></span></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">出借人条件</dt>
+									<dd class="fl" id="repay_from">风险承受能力“稳健型”及以上</dd>
+								</dl>
+
+								<dl class="clear">
+									<dt class="fl">风险提示</dt>
+									<dd class="fl">
+										<a href="zt_protocol_risk.html" target="_blank" onclick="_czc.push(['_trackEvent', '出借详情-项目介绍', '点击', '风险提示文件']);">《出借人网络借贷风险提示》</a>
+										<a href="zt_protocol_prohibit.html" target="_blank" onclick="_czc.push(['_trackEvent', '出借详情-项目介绍', '点击', '风险提示文件']);">《出借人网络借贷禁止性行为提示》</a>
+									</dd>
+								</dl>
+								<dl class="clear" id="replTit">
+									<dt>还款计划</dt>
+									<dd></dd>
+								</dl>
+								<div class="borrower_msg_one font_size14" id="replCon">
+
+									<table border="" cellspacing="" cellpadding="" class="invest_table">
+										<tbody id="project_repay_plan">
+
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+						<div class="program_tab_con borrower_msg font_size14">
+							<div class="program_msg_con">
+								<dl class="clear">
+									<dt class="fl">公司名称</dt>
+									<dd class="fl">XXXXXXXXXXXXXXX</dd>
+									<!-- <dd class="fl" id="borrowerCompanyName"></dd> -->
+								</dl>
+								<dl class="clear">
+									<dt class="fl">注册资本</dt>
+									<dd class="fl" id="borrowerRegisterAmount"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">实缴资本</dt>
+									<dd class="fl" id="contributedCapital"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">注册地址</dt>
+									<dd class="fl">XXXXXXXXXXXXXXX</dd>
+									<!-- <dd class="fl" id="address"></dd> -->
+								</dl>
+								<dl class="clear">
+									<dt class="fl">成立时间</dt>
+									<dd class="fl" id="borrowerRegisterDate"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">法定代表人</dt>
+									<dd class="fl">XXX</dd>
+									<!-- <dd class="fl" id="agentPersonName"></dd> -->
+								</dl>
+								<!-- 
+								<dl class="clear">
+									<dt class="fl">股东信息</dt>
+									<dd>
+										<a href="javascript:;" id="LoanBasicInfoBtn">查看</a>
+									</dd>
+								</dl> -->
+								<dl class="clear">
+									<dt class="fl">所属行业</dt>
+									<dd class="fl" id="industry"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">办公地点</dt>
+									<dd class="fl">XXXXXXXXXXXXXXXXXXXXX</dd>
+									<!-- <dd class="fl" id="addressBS"></dd> -->
+								</dl>
+								<dl class="clear">
+									<dt class="fl">经营区域</dt>
+									<dd class="fl" id="operatingArea"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">收入及负债情况</dt>
+									<dd class="fl">年收入:<u id="annualRevenue"></u>元;负债:<u id="liabilities"></u>元</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">借款人经营及财务状况</dt>
+									<dd class="fl" id="businessFinancialSituation">良好</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">借款人还款能力变化情况</dt>
+									<dd class="fl" id="abilityToRepaySituation">月收入无变化</dd>
+								</dl>
+
+								<dl class="clear">
+									<dt class="fl">借款人是否涉诉</dt>
+									<dd class="fl" id="litigationSituation">无涉诉</dd>
+								</dl>
+								<dl class="clear ">
+									<dt class="fl">借款人是否行政处罚</dt>
+									<dd class="fl" id="administrativePunishmentSituation">无</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">逾期情况</dt>
+									<dd class="fl" id="platformOverdueSituation">在本平台历史逾期0次，当前逾期金额0.00万元</dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">其他平台借款余额</dt>
+									<dd class="fl" id="otherCreditInformation"></dd>
+								</dl>
+								<!-- 
+								<dl class="clear">
+									<dt class="fl">借款人承诺文件</dt>
+									<dd class="fl">
+										<a href="javascript:;" target="_blank" id="declarationFilePath">查看承诺文件</a>
+									</dd>
+								</dl> -->
+								<!-- 熙耘关系说明文件. -->
+								<dl class="clear">
+									<dt class="fl">各方关系说明文件</dt>
+									<dd class="fl">
+										<a href="javascript:;" target="_blank" id="relationFilePath">各方关系说明文件</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="program_tab_con risk_management">
+							<div class="program_msg_con">
+								<dl class="clear">
+									<dt class="fl">还款来源</dt>
+									<dd class="fl" id="sourceofrepayment"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">还款保障措施</dt>
+									<dd class="fl" id="repaymentGuaranteeMeasures"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">风控措施</dt>
+									<dd class="fl" id="risk_item_msg"></dd>
+								</dl>
+								<dl class="clear">
+									<dt class="fl">相关文件</dt>
+									<div class="file_more">
+										<div id="fileList">
+
+											<div>
+												<ul id="filePro">
+
+												</ul>
+											</div>
+											<div>
+												<ul id="fileTb"></ul>
+											</div>
+											<div>
+												<ul id="fileRisk"></ul>
+											</div>
+										</div>
+										<div class="look_more_pic clear"><span>查看更多</span></div>
+									</div>
+								</dl>
+							</div>
+						</div>
+						<div class="program_tab_con lending_record">
+
+							<ul class="borrower_record font_size14" id="project_invest_list"></ul>
+							<!--light-pagination -->
+							<div class="pagination_holder clearfix">
+								<div id="light_pagination" class="pagination light_theme simple_pagination"></div>
+							</div>
+
+						</div>
+						<div class="program_tab_con common_question ">
+							<dl style="display: none;" id="question01">
+								<dt>Q1&nbsp;&nbsp;供应链金融项目安全么？</dt>
+								<dd>扶持优质资产端，锁定核心企业供应链，为企业提供应收/应付账款管理和信用输出、批量为核心企业上下游提供供应链金融综合解决方案，核心企业信用背书项目贸易真实透明并按时回款。</dd>
+							</dl>
+							<dl id="question02">
+								<dt>Q1&nbsp;&nbsp;房产抵押项目安全吗？</dt>
+								<dd>中投摩根以严谨负责的态度对待每笔借款进行严格筛选，抵押物全部为北京房产和太原房产，并且为首次足值抵押，支付与海口联合农商银行进行合作，保证资金去向透明可追踪，每笔出借信息真实有效。</dd>
+
+							</dl>
+							<dl>
+								<dt>Q2&nbsp;&nbsp;出借资金的起点是多少？</dt>
+								<dd>最低1000元出借，100的倍数递增。</dd>
+							</dl>
+							<dl>
+								<dt>Q3&nbsp;&nbsp;  什么时间开始计算利息？</dt>
+								<dd>满标日(放款日)开始计息。</dd>
+							</dl>
+							<dl>
+								<dt>Q4&nbsp;&nbsp;利息和本金什么时发放？</dt>
+								<dd>项目会按照还款计划的时间，每月付息，到期退还本金；付息日期如赶上周末或节假日，顺延至下一个工作日。</dd>
+							</dl>
+						</div>
+					</div>
+					<!--login_null-->
+					<div class="program_info_login_null">
+						<p>您尚未登录</p>
+						<p>(登录后才能查看更多)
+							<a href="login.html" onclick="_czc.push(['_trackEvent', '出借详情未登录', '点击', '去登录']);">去登录>></a>
+						</p>
+					</div>
+					<!->
+					<div class="invest_null">
+						<p>您尚未出借</p>
+						<p>(出借该项目的用户才可查看相关信息)
+							<a href="invest_home.html">去出借>></a>
+						</p>
+					</div>
+
+				</div>
+				<div class="invest_foot con_wrap">
+					<p><img src="images/invest/icon_bank.png" /></p>
+					<p>
+						<a href="zt_protocol_risk.html" target="_blank">市场有风险&nbsp;&nbsp;出借需谨慎。</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!--隐藏域内容，用来存放项目信息 begin-->
+		<input type="hidden" name="project_id" id="project_id" value="" />
+		<input type="hidden" name="project_span" id="project_span" value="" />
+		<input type="hidden" name="project_amount" id="project_amount" value="" />
+		<input type="hidden" name="project_rate" id="project_rate" value="" />
+		<input type="hidden" name="loan_date" id="loan_date" value="" />
+		<input type="hidden" name="project_balanceamount" id="project_balanceamount" value="" />
+		<input type="hidden" name="" id="number" value="">
+		<input type="hidden" name="" id="userName" value="">
+		<input type="hidden" name="" id="proStatic" value="">
+		<input type="hidden" name="" id="projectProductType" value="">
+		<input type="hidden" name="temp_countdowndate" id="temp_countdowndate" value="" />
+		<input type="hidden" name="project_minamount" id="project_minamount" value="" />
+		<input type="hidden" name="project_maxamount" id="project_maxamount" value="" />
+		<input type="hidden" name="project_stepamount" id="project_stepamount" value="" />
+		<input type="hidden" name="proIntroduce" id="proIntroduce" value="" />
+		<input type="hidden" name="proState" id="proState" value="" />
+		<!-- mask-->
+		<div class="mask_drop"></div>
+		<!--开户-->
+		<div class="mask_bank">
+			<span class="close" onclick="_czc.push(['_trackEvent', '出借详情-开通银行存管弹窗', '点击', '关闭、空白区']);"></span>
+			<h4><img src="images/invest/open_bank.png"/></h4>
+			<h5>开通银行存管</h5>
+			<p>资金会由海口联合农商银行负责存管</p>
+			<a class="mask_btn" href="account_setting_bankcard.html" onclick="_czc.push(['_trackEvent', '出借详情-开通银行存管弹窗', '点击', '立即开通按钮']);">立即开通</a>
+
+		</div>
+		<!--项目评级-->
+		<div class="mask_project_rating" style="overflow: hidden;width: 400px;height: 340px;margin-left: -200px; margin-top: -170px;">
+			<span class="close"></span>
+			<h4 style="padding: 30px 0 0; font-size: 16px;">评级说明</h4>
+			<div class="mpr_img">
+				<img src="images/invest/rate_01.png" />
+				<!--<img src="images/invest/rate_02.png" />
+				<img src="images/invest/rate_03.png" />
+				<img src="images/invest/rate_04.png" />
+				<img src="images/invest/rate_05.png" />
+				<img src="images/invest/rate_06.png" />
+				<img src="images/invest/rate_07.png" />
+				<img src="images/invest/rate_08.png" />-->
+			</div>
+		</div>
+		<!--风险测评-->
+		<div class="mask_risk">
+			<span class="close" onclick="_czc.push(['_trackEvent', '出借详情-风险测评弹窗', '点击', '关闭、空白区']);"></span>
+			<h4><img src="images/invest/risk.png"/></h4>
+			<h5>进行风险测评</h5>
+			<p>便于我们为您推荐更加合适的产品</p>
+			<a class="mask_btn" href="account_risk_test.html" onclick="_czc.push(['_trackEvent', '出借详情-风险测评弹窗', '点击', '立即测评']);">立即测评</a>
+		</div>
+		<!--股东信息-->
+		<div class="mask_LoanBasicInfo">
+			<span class="close"></span>
+			<h4>股东信息</h4>
+			<ul id="shareholdersList">
+				<!--<li><b>股东张三</b><em>85%</em></li>
+				<li><b>股东张三</b><em>85%</em></li>
+				<li><b>股东张三</b><em>85%</em></li>-->
+			</ul>
+			<div class="LoanBasicInfo_null clear">暂无股东信息</div>
+			<div class="btn_loanbi clear">已了解</div>
+		</div>
+		<!--出借温馨提示-->
+		<div class="mask_spot">
+			<span class="close" onclick="_czc.push(['_trackEvent', '出借详情-温馨提示弹窗', '点击', ''取消、关闭']);"></span>
+			<h4>温馨提示</h4>
+			<p>您当前出借后剩余可投金额小于<span id="spot_min"></span>元，可一次性出借全部剩余可投金额，或者出借不大于<span id="spot_max"></span>元。</p>
+			<div class="spot_btn">
+				<span class="fl" id="close_spot">取消</span>
+				<span class="fr" id="submit_spot">已了解</span>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+	<script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+	<script type="text/javascript" src="js/invest_details.js"></script>
+
+</html>

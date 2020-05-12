@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台——中投摩根_交易记录</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+		<link rel="stylesheet" type="text/css" href="css/home.min.css" />
+	</head>
+
+	<body>
+		<div class="home_wrap con_wrap home_overhidden">
+			<div class="home_l fl">
+				<ul>
+					<li>
+						<a href="account_home.html">账户总览</a>
+					</li>
+					<li>
+						<a href="account_invest.html">我的出借</a>
+					</li>
+					<li class="cur">
+						<a href="account_trading_record.html">交易记录</a>
+					</li>
+					<li>
+						<a href="account_coupon.html">优惠券</a>
+					</li>
+					<li>
+						<a href="account_invite_friend.html">邀请好友</a>
+					</li>
+					<li>
+						<a href="account_news.html">消息中心</a>
+					</li>
+					<li>
+						<a href="account_setting.html">账户设置</a>
+					</li>
+				</ul>
+			</div>
+			<div class="home_r fr">
+				<div class="bg_white">
+					<div class="home_r_tab recording_tab">
+
+						<ul>
+							<li class="fl">交易类型</li>
+							<li class="cur fl" onclick="initType(-1);">全部</li>
+							<li class="fl" onclick="initType(3);">出借</li>
+							<li class="fl" onclick="initType(0);">充值</li>
+							<li class="fl" onclick="initType(1);">提现</li>
+							<li class="fl" onclick="initType(4);">回款</li>
+							<li class="fl" onclick="initType(10);">优惠券</li>
+
+						</ul>
+						<ul class="clear trading_laydate">
+							<li style="display: inline-block; margin-bottom: 0;">交易时间</li>
+
+							<p class="invest_timer_p ">
+								<input type="text" class="laydate-icon" id="begin">
+								<span>到</span>
+								<input type="text" class="laydate-icon" id="end">
+							</p>
+							<div class="transaction_record_handle ">
+								<a href="javascript:;" onclick="findTradeBatchDetailList(1, 10);">查看</a>
+							</div>
+
+						</ul>
+					</div>
+					<div class="home_invest_wrap">
+
+						<div class="home_invest_con home_trading_con">
+							<ul id="trading_ul_id">
+								<li>
+									<span class="fl">交易时间</span>
+									<span class="fl">交易类型</span>
+									<span class="fl">交易金额(元)</span>
+									<span class="fl">账户余额(元)</span>
+								</li>
+							</ul>
+							<div class="null_recording clear"></div>
+						</div>
+						<!-- light-pagination start. -->
+						<div class="pagination_holder clearfix">
+							<div id="light-pagination" class="pagination light_theme simple_pagination">
+								<ul>
+								</ul>
+							</div>
+						</div>
+						<!-- light-pagination end. -->
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div>
+			<input type="hidden" name="last" id="last" value="" />
+			<input type="hidden" name="pageNo" id="pageNo" value="" />
+			<input type="hidden" name="type" id="type" value="" />
+		</div>
+
+		<div class="mask_drop"></div>
+		<div class="reimbursement_plan">
+			<div class="close_mask"><span class="close_mask_btn font_size20">X</span></div>
+			<h3>回款计划</h3>
+			<div class="reimbursement_con">
+				<div class="rcp_tit"><span>状态</span><i>时间</i>
+					<div class="fr">金额</div>
+				</div>
+				<ul>
+				</ul>
+
+			</div>
+		</div>
+		<div class="mask_investNo_tip">满标后可查看</div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery.js "></script>
+	<script type="text/javascript" src="js/jquery.cookie.js "></script>
+	<script type="text/javascript" src="js/common.js "></script>
+	<script type="text/javascript" src="laydate/laydate.js"></script>
+	<script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+	<script type="text/javascript" src="js/account_trading_record.js"></script>
+
+	<script>
+		
+		// 开始日期
+		var start = {
+			elem: '#begin',
+			format: 'YYYY-MM-DD',
+			isclear: true,
+			min: '2017-12-20',
+			max: laydate.now(),
+			istime: false,
+			istoday: false,
+			choose: function(datas) {
+				end.min = datas;
+				end.start = datas;
+			}
+		};
+		// 结束日期
+		var end = {
+			elem: '#end',
+			format: 'YYYY-MM-DD',
+			isclear: true,
+			min: '2017-12-20',
+			max: laydate.now(),
+			istime: true,
+			istoday: true,
+			choose: function(datas) {
+			}
+		};
+		
+		$(function() {
+			
+			// 开始日期
+			$("#begin").click(function(){
+				laydate(start);
+			});
+			// 结束日期
+			$("#end").click(function(){
+				laydate(end);
+			});
+		});
+
+// 相关属性解释
+//{
+//elem: '#id', //需显示日期的元素选择器
+//event: 'click', //触发事件
+//format: 'YYYY-MM-DD hh:mm:ss', //日期格式
+//istime: false, //是否开启时间选择
+//isclear: true, //是否显示清空
+//istoday: true, //是否显示今天
+//issure: true, 是否显示确认
+//festival: true //是否显示节日
+//min: '1900-01-01 00:00:00', //最小日期
+//max: '2099-12-31 23:59:59', //最大日期
+//start: '2014-6-15 23:00:00',  //开始日期
+//fixed: false, //是否固定在可视区域
+//zIndex: 99999999, //css z-index
+//choose: function(dates){ //选择好日期的回调
+//}
+//}
+		
+</script>
+
+</html>

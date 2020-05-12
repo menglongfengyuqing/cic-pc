@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>中投摩根【官网】_领先的互联网借贷信息交互平台</title>
+    <meta content="供应链金融, 区块链金融，P2P网贷平台,互联网金融" name="keywords"/><meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+    <meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率."
+          name="description"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/information.min.css">
+
+    <style type="text/css">
+        .userChart {
+            height: 350px !important;
+            margin-top: 0;
+        }
+
+        .user_data ul {
+            position: relative;
+        }
+
+        .user_data ul li {
+            width: 50%;
+        }
+
+        .canvas_wrap {
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div class="information-bg">
+
+    <div class="information-header">
+        <ul class="container">
+             <li class="fl">
+                <a href="information_disclosure.html">信息披露</a>
+            </li>
+            <li class="fl">
+                <a href="information_about_us.html">平台介绍</a>
+            </li>
+            <li class="fl cur">
+                <a href="information_data.html">运营数据</a>
+            </li>
+            <li class="fl">
+                <a href="information_report.html">运营报告</a>
+            </li>
+            <li class="fl">
+                <a href="information_risk_management.html">风控管理</a>
+            </li>
+            <li class="fl">
+                <a href="information_law.html">法律法规</a>
+            </li>
+            <li class="fl">
+                <a href="information_media_coverage.html">媒体报道</a>
+            </li>
+            <li class="fl">
+                <a href="information_announcement.html">平台公告</a>
+            </li>
+            <li class="fl">
+                <a href="information_join_us.html">加入我们</a>
+            </li>
+            <li class="fl">
+                <a href="information_contact_us.html">联系我们</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="information-about-us-wrap container">
+        <div class="operational-data-group">
+            <div class="operational-tit">
+                <h3>运营数据</h3>
+                <p>运营数据为实时更新</p>
+
+            </div>
+            <div class="operate_time">
+                <h4>中投摩根平台已上线</h4>
+                <ul>
+                    <li id="pastDay_a">0</li>
+                    <li id="pastDay_b">0</li>
+                    <li id="pastDay_c">0</li>
+                    <li id="pastDay_d">0</li>
+                    <li>天</li>
+                </ul>
+            </div>
+        </div>
+        <div class="operate-group operate-group-mt10">
+            <div class="operate-tit">借款标的情况</div>
+            <div class="disclosure_group">
+                <dl class="fl">
+                    <dd id="loanTotalAmount_id"></dd>
+                    <dt>累计借贷金额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="loanTotalNumbers_id"></dd>
+                    <dt>借款累计笔数(笔)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="loanTotalAvailableAmount_id"></dd>
+                    <dt>借贷本金余额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="loanTotalAvailableNumbers_id"></dd>
+
+                    <dt>借款余额笔数(笔)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="loanRelationalTotalAmount_id"></dd>
+
+                    <dt>关联关系借款余额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="loanRelationalTotalNumbers_id"></dd>
+
+                    <dt>关联关系借款余额笔数(笔)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="loanUserTotalInterestAmount_id"></dd>
+
+                    <dt>借贷利息余额(元)</dt>
+                </dl>
+            </div>
+        </div>
+        <!--借款人情况-->
+        <div class="operate-group operate-group-mt10">
+            <div class="operate-tit">借款人情况</div>
+            <div class="operate-group-two">
+                <ul>
+                    <li class="fl">
+                        <dl>
+                            <dt>累计借款人<br>数量(户)</dt>
+                            <dd id="loanUserTotalNumbers_id"></dd>
+                        </dl>
+                    </li>
+                    <li class="fl">
+                        <dl>
+                            <dt>人均累计<br>借贷金额(元)</dt>
+                            <dd id="loanAllUserPerCapitaTotalAmount_id"></dd>
+                        </dl>
+                    </li>
+                    <li class="fl">
+                        <dl>
+                            <dt>当前借款人<br>数量(户)</dt>
+                            <dd id="nowLoanUserTotalNumbers_id"></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="operate-ten">
+                    <ul>
+                        <li class="fl">
+                            <dl>
+                                <dd id="theTopTenStayStillTotalAmountPercentageInner">前十大借款人待还金额占比</dd>
+                                <dt>
+
+                                <div class="progress">
+                                    <div class="outer"><span class="inner" id="theTopTenStayStillTotalAmountPercentage"
+                                    ></span></div>
+                                </div>
+
+                                </dt>
+                                <dd id="otherTheTopTenStayStillTotalAmountPercentageOther">其他占比</dd>
+                            </dl>
+                        </li>
+                        <li class="fr">
+                            <dl>
+                                <dd id="theBiggestStayStillTotalAmountPercentageInfo">最大单一借款人待还金额占比</dd>
+                                <dt>
+
+                                <div class="progress">
+                                    <div class="outer"><span class="inner"
+                                                             id="theBiggestStayStillTotalAmountPercentage"></span></div>
+                                </div>
+
+                                </dt>
+                                <dd id="theBiggestStayStillTotalAmountPercentageOther">其他占比</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!--出借人情况-->
+        <div class="operate-group operate-group-mt10">
+            <div class="operate-tit">出借人情况</div>
+            <div class="disclosure_group">
+                <dl class="fl">
+                    <dd id="investTotalAmount_id"></dd>
+                    <dt>累计撮合交易额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="interestTotalAmount_id"></dd>
+                    <dt>累计为用户赚取利息(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="loanUserInfoTotalNumbers_id"></dd>
+                    <dt>累计出借人数量(人)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="nowLoanUserInfoNumbers_id"></dd>
+                    <dt>当前出借人数量(人)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="investPerCapitaTotalAmount_id"></dd>
+                    <dt>人均累计出借金额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="theFirstInvestTotalAmountPercentage_id"></dd>
+                    <dt>最大单户出借余额占比(%)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="theTopTenInvestTotalAmountPercentage_id"></dd>
+                    <dt>最大十户出借余额占比(%))</dt>
+                </dl>
+            </div>
+            <div class="clear operate-canvas">
+                <div class="user_data">
+                    <ul>
+                        <li class="fl">
+                            <div class="canvas_wrap">
+                                <div class="rate_cic_dis"></div>
+                                <div id="sexDistribution" class="userChart"></div>
+                            </div>
+                        </li>
+                        <li class="fr li_posi">
+                            <div class="canvas_wrap">
+                                <div class="rate_cic_dis"></div>
+                                <div id="ageDistribution" class="userChart"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!--逾期情况-->
+        <div class="operate-group operate-group-mt10">
+            <div class="operate-tit">逾期情况</div>
+            <div class="disclosure_group">
+                <dl class="fl">
+                    <dd id="overdueAmount_id"></dd>
+                    <dt>逾期金额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="amountOverdueRate_id"></dd>
+                    <dt>金额逾期率(%)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="projectOverdueRate_id"></dd>
+                    <dt>项目逾期率(%)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="overdueNumbers_id"></dd>
+                    <dt>逾期笔数(笔)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="overdue90DaysAmount_id"></dd>
+                    <dt>逾期90天以上金额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="overdue90DaysNumbers_id"></dd>
+                    <dt>逾期90天以上笔数(笔)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="projectClassificationOverdueRate90_id"></dd>
+                    <dt>项目分级逾期率(%)1～90(天)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="projectClassificationOverdueRate180_id"></dd>
+                    <dt>项目分级逾期率(%)91～180(天)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="projectClassificationOverdueRate360_id"></dd>
+                    <dt>项目分级逾期率(%)180(天)以上</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="amountClassificationOverdueRate90_id"></dd>
+                    <dt>金额分级逾期率(%)1～90(天)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="amountClassificationOverdueRate180_id"></dd>
+                    <dt>金额分级逾期率(%)91～180(天)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="amountClassificationOverdueRate360_id"></dd>
+                    <dt>金额分级逾期率(%)180(天)以上</dt>
+                </dl>
+
+            </div>
+        </div>
+        <!--代偿情况-->
+        <div class="operate-group operate-group-mt10">
+            <div class="operate-tit">代偿情况</div>
+            <div class="disclosure_group">
+                <dl class="fl">
+                    <dd id="theCumulativeReplaceRepayAmount_id"></dd>
+                    <dt>累计代偿金额(元)</dt>
+                </dl>
+                <dl class="fl">
+                    <dd id="theCumulativeReplaceRepayNumbers_id"></dd>
+                    <dt>累计代偿笔数(笔)</dt>
+                </dl>
+            </div>
+        </div>
+        <div class="operate-report">
+            <ul>
+                <li class="fl"><a href="zt_yy_2018_up.html" target="_blank"><img
+                        src="images/infor/pic_home_operationdata_reportbg_2018.png" height="250" width="500"/></a></li>
+                <li class="fr"><a href="zt_operation_report.html" target="_blank"><img
+                        src="images/infor/pic_home_operationdata_reportbg_2017.png" height="250" width="500"/></a></li>
+            </ul>
+        </div>
+<div class="about-bg">
+                <h4 class="sign"><span>法定代表人签字：</span></h4>
+            </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/highstock.js"></script>
+<script type="text/javascript" src="js/info-disclosure.js"></script>
+
+</html>

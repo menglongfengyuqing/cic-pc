@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>中投摩根—领先的互联网借贷信息交互平台——中投摩根</title>
+    <meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords"/>
+    <meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率."
+          name="description"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <style>
+
+    </style>
+</head>
+
+<body style="background: #f2f2f2;">
+<!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+<input style="visibility: hidden;" type="text" name="fakeusernameremembered"/>
+<input style="visibility: hidden;" type="password" name="fakepasswordremembered"/>
+
+<!--main_contain-->
+<div class="con_wrap white_bg">
+    <div class="register_wrap">
+        <div class="register_top">
+            <span class="fl">免费注册</span>
+            <i class="fr">已有账号? &nbsp;<a href="login.html" onclick=" _czc.push(['_trackEvent', '登录logo', '点击', '跳转首页'])">立即登录</a></i>
+        </div>
+        <div class="register_step">
+            <div class="bar"></div>
+            <ul>
+                <li class="fl cur">
+                    <i>1</i>
+                    <span>创建账号</span>
+                </li>
+                <li class="fl ">
+                    <i>2</i>
+                    <span>设置密码</span>
+                </li>
+                <li class="fl">
+                    <i>3</i>
+                    <span>注册成功</span>
+                </li>
+            </ul>
+        </div>
+        <div class="register_step_group_wrap" >
+            <div class="register_step_group">
+              <div class="fl register_fl">
+                  <div class="login_ul">
+                      <ul class="step_one">
+                          <li class="position_rel">
+                              <div class="register_liwrap">
+
+
+                              <input class="font_size20" type="number" id="moblieR" placeholder="请输入手机号">
+                              </div>
+                          </li>
+                          <li class="position_rel">
+                              <div class="register_liwrap fl">
+                                  <input type="number" placeholder="请输入图形验证码" class="font_size30" id="code">
+                              </div>
+                              <div class="verification_code fr register_liwrap">
+                                  <div class="code" id="pictureCodeR" onclick="getPictureCode()"></div>
+                                  <input type="hidden" id="codeKey" value="391577">
+                              </div>
+
+                          </li>
+
+                          <li class="position_rel clear">
+                              <div class="register_liwrap">
+                                  <input class="font_size20" type="number" id="phoneCode" placeholder="请输入短信验证码">
+                              </div>
+                              <span class="send_code" onclick="sendMessage()" id="btnSendCode">获取验证码</span>
+                          </li>
+
+                      </ul>
+                      <ul class="step_two">
+                          <li class="position_rel">
+                              <div class="register_liwrap">
+
+
+                                  <input class="font_size20" type="password" id="pwd" placeholder="请输入6-16位包含数字和字母的密码">
+                              </div>
+                          </li>
+                          <li class="position_rel">
+                              <div class="register_liwrap">
+
+
+                                  <input class="font_size20" type="password" id="pwdRepeat" placeholder="请再次输入密码">
+                              </div>
+                          </li>
+                          <li class="position_rel">
+                              <div class="register_liwrap">
+
+
+                                  <input class="font_size20" type="number" id="recommendMobilePhone" placeholder="请输入邀请人手机号(选填)">
+                              </div>
+                          </li>
+                      </ul>
+                      <div class="clear position_rel">
+
+                          <div class="error_msg"></div>
+
+                          <div class="agreement">
+                              <span><input type="checkbox" id="agreementLogin"></span>
+                              <em class="fl">我已阅读并同意</em>
+                              <a href="login_protocol.html" class="fl" target="_blank">中投摩根服务协议</a>
+                          </div>
+                      </div>
+                      <div class="submit clea font_size24">
+                          <input type="submit" name="" id="one" value="下一步" onclick="registOne()">
+                          <input type="submit" name="" id="two" value="下一步" onclick="registTwo()" style="display: none;">
+                      </div>
+                  </div>
+              </div>
+              <div class="fr">
+                  <img src="images/login/coupon.png" alt="">
+              </div>
+            </div>
+            <div class="register_success">
+                <h4><span>恭喜您！注册成功！</span></h4>
+                <h5><span><b>600</b>元红包</span>已放入您的账户</h5>
+                <div class="success_btn">
+                    <a href="index.html" onclick=" _czc.push(['_trackEvent', '注册成功', '点击', '返回首页'])">返回首页</a>
+                    <a href="account_user_privilege.html" onclick=" _czc.push(['_trackEvent', '注册成功', '点击', '立即查看红包'])">立即查看</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/placeholder.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+</html>

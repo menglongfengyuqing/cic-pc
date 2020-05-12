@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台—中投摩根-积分商城-收货地址</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/account.css" />
+	</head>
+
+	<body class="">
+
+		<!--main_contain-->
+		<div class="main_contain">
+			<!--account_nav -->
+			<div class="account_nav_wrap">
+				<div class="account_nav font_size18">
+					<ul>
+						<li class="fl">
+							<a href="account_home.html">账户总览</a>
+						</li>
+						<li class="fl cur">
+							<!--<a href="integral_mall_game.html">积分抽奖</a>-->
+							<a href="javascript:;" class="lotteryNo">积分抽奖</a>
+						</li>
+						<li class="fl">
+							<a href="account_user_privilege.html">用户特权</a>
+						</li>
+						<li class="fl">
+							<a href="account_news.html">消息中心</a>
+						</li>
+						<li class="fl">
+							<a href="account_setting.html">账户设置</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--product_datails_main-->
+			<div class="product_details_wrap">
+				<div class="account_tit">
+					<h4 class="fl font_size18">收货地址</h4>
+				</div>
+				<div class="setting_bankcard_wrap setting_address">
+					<div class="setting_mail_con font_size18">
+						<div class="setting_mail_group ">
+							<label for="">收货人</label>
+							<input type="text" name="" value="" class="fr" placeholder="请输入收货人姓名" id="name">
+						</div>
+
+						<div class="setting_mail_group">
+							<label for="">详细地址</label>
+							<div class="fr">
+
+								<select name="" id="selProvince">
+									<!--<option value="">北京</option>
+									<option value="">天津</option>
+									<option value="">上海</option>
+									<option value="">重庆</option>-->
+
+								</select>
+								<select name="" id="selCity">
+									<!--<option value="">北京</option>
+									<option value="">天津</option>
+									<option value="">上海</option>
+									<option value="">重庆</option>-->
+
+								</select>
+							</div>
+
+						</div>
+						<div class="setting_mail_group ">
+							<label for="">所在地址</label>
+							<textarea name="" rows="3" cols="26" placeholder="请输入详细地址" class="fr" id="address"></textarea>
+						</div>
+						<div class="setting_mail_group ">
+							<label for="">手机号</label>
+							<input type="text" name="" value="" class="fr" placeholder="请输入收货人手机号" id="mobile">
+						</div>
+						<div class="setting_mail_group submit_mail">
+							<input type="submit" name="" id="saveAddress" value="保存" class="fr">
+						</div>
+						<div class="error_msg clear">手机号格式不正确</div>
+					</div>
+
+				</div>
+				<div class="mask_investNo_tip">积分抽奖维护中，暂时停止使用</div>
+	</body>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>
+	<script type="text/javascript" src="js/CityJson.js"></script>
+	<script type="text/javascript" src="js/ProJson.js"></script>
+	<script type="text/javascript" src="js/integral_mall_address.js"></script>
+	<script>
+		$(".lotteryNo").click(function() {
+
+			$(".mask_investNo_tip").show();
+			setTimeout(function() {
+				$(".mask_investNo_tip").hide();
+			}, 2000);
+		});
+	</script>
+
+</html>

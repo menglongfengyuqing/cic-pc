@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台—中投摩根-账户—绑定银行卡</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/account.css" />
+		<style>
+			.modify_bankcard {
+				color: #a11c3f;
+			}
+			.setting_last input{
+				    margin-left: 436px;
+    margin-top: 0;
+			}
+			.payment_data_wrap{
+				margin-bottom: 16px;
+			}
+		</style>
+	</head>
+
+	<body class="">
+
+		<!--main_contain-->
+		<div class="home_wrap con_wrap">
+
+			<!--account main-->
+			<div class="account_data_wrap payment_data_wrap">
+				<div class="bank_banner">
+					<img src="images/account/bank_banner.png" />
+				</div>
+				<!--account invest total-->
+				<div class="account_center setting_center">
+
+					<div class="setting_bankcard_new">
+						<div class="setting_mail_con font_size14">
+							<div class="setting_mail_group">
+								<label for="">姓名</label>
+								<input type="text" name="" id="realName" value="" class="fl" placeholder="请输入姓名" />
+								<div class="bank_error fl">请输入姓名</div>
+							</div>
+							<div class="setting_mail_group">
+								<label for="">身份证号</label>
+								<input type="text" name="" id="IdCard" value="" class="fl" placeholder="请输入身份证号" />
+								<div class="bank_error fl">请输入身份证号</div>
+							</div>
+							<div class="setting_mail_group">
+								<label for="">请绑定本人持卡的储蓄卡</label>
+								<input type="number" name="" id="bankCard" value="" class="fl" placeholder="请输入银行卡号" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"/>
+								<div class="bank_error fl">请输入银行卡号</div>
+							</div>
+							<div class="setting_mail_group">
+								<label for="">银行预留手机号</label>
+								<input type="number" name="" id="bankCardPhone" value="" class="fl" placeholder="请输入银行预留手机号" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"/>
+								<div class="bank_error fl">请输入银行预留手机号</div>
+							</div>
+							<div class="setting_mail_group submit_mail">
+								<a href="javascript:;" class="find_btn "><span class="check_bank">查看支持的银行及限额</span></a>
+							</div>
+							
+							<div class=""><!-- 1：已实名认证--已开户 ，2：未实名认证--未开户-->
+								<input type="hidden" name="certificateChecked" id="certificateChecked" value="" class="fl" />
+							</div>
+							
+							<div class="setting_mail_group submit_mail setting_last" style="margin-bottom:1px">
+								<input type="submit" name="" id="bind_card_btn" value="开通银行存管" class="fl bank_submit" />
+							</div>
+							<div class="error_msg"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--support bank-->
+		<div class="mask_drop"></div>
+
+		<div class="bank_list">
+			<h4>支持银行及限额说明</h4>
+			<div class="close_bank_mask"></div>
+			<div class="table_wrap">
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<td>支持的银行</td>
+						<td>限额说明</td>
+					</tr>
+					<tr>
+						<td>工商银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>10万元</span></td>
+					</tr>
+					<tr>
+						<td>中国银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>20万元</span></td>
+					</tr>
+					<tr>
+						<td>建设银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>59万元</span></td>
+					</tr>
+					<tr>
+						<td>交通银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>20万元</span></td>
+					</tr>
+					<tr>
+						<td>民生银行</td>
+						<td>单笔充值限额<span>1000元</span>&nbsp;&nbsp;单日充值限额<span>5万元</span></td>
+					</tr>
+					<tr>
+						<td>兴业银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>5万元</span></td>
+					</tr>
+
+					<tr>
+						<td>光大银行</td>
+						<td>单笔充值限额<span>1万元</span>&nbsp;&nbsp;单日充值限额<span>5万元</span></td>
+					</tr>
+					<tr>
+						<td>平安银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>5万元</span></td>
+					</tr>
+					<tr>
+						<td>中信银行</td>
+						<td>单笔充值限额<span>5000元</span>&nbsp;&nbsp;单日充值限额<span>5000元</span></td>
+					</tr>
+					<tr>
+						<td>北京银行</td>
+						<td>单笔充值限额<span>20万元</span>&nbsp;&nbsp;单日充值限额<span>50万元</span></td>
+					</tr>
+					<tr>
+						<td>广发银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>20万元</span></td>
+					</tr>
+					<tr>
+						<td>招商银行</td>
+						<td>单笔充值限额<span>1000元</span>&nbsp;&nbsp;单日充值限额<span>5000元</span></td>
+					</tr>
+					<tr>
+						<td>邮储银行</td>
+						<td>单笔充值限额<span>1万元</span>&nbsp;&nbsp;单日充值限额<span>1万元</span></td>
+					</tr>
+					<tr>
+						<td>浦发银行</td>
+						<td>单笔充值限额<span>5万元</span>&nbsp;&nbsp;单日充值限额<span>5万元</span></td>
+					</tr>
+					<tr>
+						<td>华夏银行</td>
+						<td>单笔充值限额<span>1000元</span>&nbsp;&nbsp;单日充值限额<span>2000元</span></td>
+					</tr>
+					<tr>
+						<td>农业银行</td>
+						<td>单笔充值限额<span>1万元</span>&nbsp;&nbsp;单日充值限额<span>1万元</td>
+					</tr>
+					<!--<tr>
+						<td>海口联合农商银行</td>
+						<td>单笔充值限额<span>100万元</span>&nbsp;&nbsp;单日充值限额<span>100万元</span></td>
+					</tr>-->
+					<!--<tr>
+						<td>农业银行</td>
+						<td>该银行仅支持网银/转账方式进行充值</td>
+					</tr>-->
+					<!--<tr>
+						<td>宁波银行</td>
+						<td>单笔充值限额<span>--</span>&nbsp;&nbsp;单日充值限额<span>--</span></td>
+					</tr>
+					<tr>
+						<td>浙商银行</td>
+						<td>单笔充值限额<span>--</span>&nbsp;&nbsp;单日充值限额<span>--</span></td>
+					</tr>
+					<tr>
+						<td>东亚银行</td>
+						<td>单笔充值限额<span>--</span>&nbsp;&nbsp;单日充值限额<span>--</span></td>
+					</tr>-->
+
+				</table>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>
+	<script type="text/javascript" src="js/account_setting_bankcard.js"></script>
+
+</html>

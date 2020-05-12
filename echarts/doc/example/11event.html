@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="ECharts">
+		<meta name="author" content="kener.linfeng@gmail.com">
+		<title>ECharts · Example</title>
+
+		<link rel="shortcut icon" href="../asset/ico/favicon.png">
+
+		<link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../asset/css/bootstrap.css" rel="stylesheet">
+		<link href="../asset/css/carousel.css" rel="stylesheet">
+		<link href="../asset/css/echartsHome.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+		<script src="./www/js/echarts.js"></script>
+		<script src="../asset/js/codemirror.js"></script>
+		<script src="../asset/js/javascript.js"></script>
+
+		<link href="../asset/css/codemirror.css" rel="stylesheet">
+		<link href="../asset/css/monokai.css" rel="stylesheet">
+		<link href="../asset/css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="container-fluid">
+			<div class="row-fluid example">
+				<div id="sidebar-code" class="col-md-4" style="display: none;">
+					<div class="well sidebar-nav">
+						<div class="nav-header">
+							<a href="#" onclick="autoResize()" class="glyphicon glyphicon-resize-full" id="icon-resize"></a>option</div>
+						<textarea id="code" name="code"> </textarea>
+					</div>
+					<!--/.well -->
+				</div>
+				<!--/span-->
+				<div id="graphic" class="col-md-8 list">
+					<div id="main" class="main"></div>
+					<!--<div class="select">
+						<p class="hd"><span>按周统计</span><span class="jiao"></span></p>
+						<ul class="bd" show="0">
+							<li flag="1">
+								<a class="item">按日统计</a>
+							</li>
+							<li flag="2" class="hover">
+								<a class="item">按周统计</a>
+							</li>
+							<li flag="3">
+								<a class="item">按月统计</a>
+							</li>
+						</ul>
+					</div>-->
+					<div style="display: none;">
+						<button type="button" class="btn btn-sm btn-success" onclick="refresh(true)">刷 新</button>
+						<span class="text-primary">切换主题</span>
+						<select id="theme-select"></select>
+
+						<span id='wrong-message' style="color:red"></span>
+						<span id='hover-console' style="color:#1e90ff"></span>
+						<span id='console' style="color:#1e90ff">Event Console</span>
+					</div>
+				</div>
+				<div class="col-md-4 list">
+					<div class="right">
+						<dl class="point">
+							<dt class="hd">指标说明<em title="平台数据按照自然周，日，月统计。">!</em></dt>
+							<dd class="bd">
+								<p><span class="tit">[新增出借]</span>&nbsp;某段时间内，出借人成功出借的资金总额，即平台的资金流入。</p>
+								<p><span class="tit">[待收本金]</span>&nbsp;某段时间内，出借人到期应收的本金总额，即平台的资金流出。</p>
+								<p><span class="tit">[提示]</span>&nbsp;若新借款大于待收本金，表示平台的资金为<span class="ptred">+正向流入</span>，反之，表示平台资金为<span class="ptgreen">-负向流出</span>。</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!--/span-->
+			</div>
+			<!--/row-->
+
+		</div>
+		<!--/.fluid-container-->
+
+		<!-- Le javascript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="../asset/js/jquery.min.js"></script>
+		<script src="../asset/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			
+			var ctxpath = 'http://192.168.1.12:8082/svc/services';
+			var str;
+			var dateT;
+			var amountT;
+			var listDate = new Array();
+			var listAmount = new Array();
+			var isTrue = false;
+			$.ajax({
+				url: ctxpath + "/getInOutCount",
+				type: "post",
+				dataType: "json",
+
+				success: function(result) {
+					var list = result.list;
+					
+					for(var i = 0; i < list.length; i++) {
+						str = list[i];
+						dateT = str.split(",")[0];
+						amountT = str.split(",")[1];
+						listDate.push(dateT);
+						listAmount.push(amountT);
+					}
+					console.log(listDate);
+					console.log(listAmount);
+					isTrue = true;
+
+					/*---------------------------*/
+				}
+			});
+			
+			require.config({
+				paths: {
+					echarts: './www/js'
+				}
+			});
+
+			// 使用
+			require(
+				[
+					'echarts',
+					'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
+					'echarts/chart/line', //使用折现图加载line模块，
+					'echarts/chart/scatter', //使用散点图加载scatter模块，
+					'echarts/chart/pie', //使用饼图加载pie模块，
+				],
+				function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var myChart = ec.init(document.getElementById('main'));
+
+					var option = {
+						title: {
+							text: '某楼盘销售情况',
+							subtext: '纯属虚构'
+						},
+						tooltip: {
+							trigger: 'axis'
+						},
+						legend: {
+							data: ['预购', '成交']
+						},
+						toolbox: {
+							show: true,
+							feature: {
+								mark: {
+									show: true
+								},
+								dataView: {
+									show: true,
+									readOnly: true
+								},
+								magicType: {
+									show: true,
+									type: ['line', 'bar', 'stack', 'tiled']
+								},
+								restore: {
+									show: true
+								},
+								saveAsImage: {
+									show: true
+								}
+							}
+						},
+						calculable: false,
+						xAxis: [ //X轴数据
+							{
+								type: 'category',
+								boundaryGap: true,
+								data:function(){
+									return listDate;
+								}
+							}
+						],
+						yAxis: [ //Y轴数据
+							{
+								type: 'value'
+							}
+						],
+						series: [ //驱动图表数据
+							{
+								name: '成交',
+								type: 'bar', //设置 默认显示图表形状 bar
+								smooth: true,
+								itemStyle: {
+									normal: {
+										areaStyle: {
+											type: 'default'
+										}
+									}
+								},
+								data: [10, 12, 21, 54, 260, 830, 710]
+							},
+							{
+								name: '预购',
+								type: 'bar', //设置 默认显示图表形状 bar
+								smooth: true,
+								itemStyle: {
+									normal: {
+										areaStyle: {
+											type: 'default'
+										}
+									}
+								},
+								data: [30, 182, 434, 791, 390, 30, 10]
+							}
+						]
+					};
+
+					// 为echarts对象加载数据 
+					myChart.setOption(option);
+				}
+			);
+		</script>
+	</body>
+
+</html>

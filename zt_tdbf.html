@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台-端午活动</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/activity.css">
+	</head>
+
+	<body>
+	
+	    <!--专题活动--2017-05-19 The Dragon Boat Festival-->
+		<div class="clear">
+			<div class="may_banner">
+				<img src="images/zt/tdbf/banner.jpg" />
+			</div>
+			<div class="tdbf_con">
+			  <img src="images/zt/tdbf/msg_img_01.jpg"/>
+			  <img src="images/zt/tdbf/msg_img_02.jpg"/>
+			  <img src="images/zt/tdbf/msg_img_03.jpg"/>
+			 
+			</div>
+			<div class="tdbf_msg">
+				<div class="tbdf_msg_prize" style="display: none;">
+					<div class="tbdf_p_l fl">
+						     <h4>您已累计邀请<span id="userCount"></span>位好友成功注册！</h4>
+						     <div class="tbdf_tab"><span>时间</span><span>手机号</span></div>
+							<div class="slide-container">
+									<!--css设置时，注意高度是显示多少个item,如：item的高度是30px，显示3个，高度则是 3*30 = 90px -->
+									<ul class="slide-list js-slide-list" id="mayList">
+										<!--<li class="odd"> <span class="active_span01 font_size20">2017.05.24</span><span class="active_span03 font_size20">1823****341</span></li>
+										<li class="even"><span class="active_span01 font_size20">2017.05.24</span><span class="active_span03 font_size20">1823****341</span></li>
+										<li class="even"><span class="active_span01 font_size20">2017.05.24</span><span class="active_span03 font_size20">1823****341</span></li>
+										<li class="even"><span class="active_span01 font_size20">2017.05.24</span><span class="active_span03 font_size20">1823****341</span></li>
+										<li class="even"><span class="active_span01 font_size20">2017.05.24</span><span class="active_span03 font_size20">1823****341</span></li>
+										<li class="even"><span class="active_span01 font_size20">2017.05.24</span><span class="active_span03 font_size20">1823****341</span></li>-->
+									</ul>
+								</div>
+					</div>
+					<div class="tbdf_p_r fr">
+						<ul>
+							<li>已邀请人数：<span id="invList1">32</span></li>
+							<li>已邀请人出借总额：<span id="invList2">300000元</span></li>
+							<li>已获现金奖励：<span id="invList3">3200元</span></li>
+							<li>目前积分总额：<span id="invList4">500分</span></li>
+						</ul>
+					</div>
+
+					
+				</div>
+				<div class="tdbf_login">
+					<div class="tdbf_login_con">
+						<img src="images/zt/tdbf/login.png"/>
+					    <span onclick="window.location.href='login.html'">登录后看看>></span>
+					</div>
+					
+				</div>
+				<div class="tbdf_bar"></div>
+					<div class="tbdf_law">
+						<p>*&nbsp;&nbsp;对于恶意刷人数的行为，中投摩根有权取消用户一切奖励，并保留相关法律权利；</p>
+						<p>*&nbsp;&nbsp;本活动法律范围内的最终解释权归中投摩根所有。</p>
+					</div>
+				<div class="tbdf_btn">
+					<a href="invest_home.html"></a>
+				</div>
+				
+			</div>
+    	</div>
+
+
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/zt_tdbf.js"></script>
+	<script>
+		var doscroll = function() {
+			var $parent = $('.js-slide-list');
+			var $first = $parent.find('li:first');
+			var height = $first.height();
+			$first.animate({
+				marginTop: -height + 'px'
+			}, 600, function() {
+				$first.css('marginTop', 0).appendTo($parent);
+			});
+		};
+		setInterval(function() {
+			doscroll()
+		}, 1000);
+	
+		if(token != null && token.trim().length > 0) {
+			
+		}
+		else{
+			
+		}
+	</script>
+
+</html>

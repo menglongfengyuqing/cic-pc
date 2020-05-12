@@ -1,0 +1,948 @@
+@charset"utf-8";
+.head {
+	width: 100%;
+	height: 40px;
+	background: #333333;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+.head .fl {
+	color: #fefdfd;
+}
+
+.head .fl span {
+	margin-right: 16px;
+	float: left;
+}
+
+.head .kefu {
+	margin-right: 21px;
+}
+
+.head .kefu:before {
+	content: "";
+	float: left;
+	width: 16px;
+	height: 17px;
+	background: url(../images/icon/kefu.png) no-repeat;
+	margin-right: 8px;
+	margin-top: 12px;
+}
+
+.head .fr li {
+	float: left
+}
+
+.head .fr li:nth-of-type(2) a {
+	margin-left: 8px;
+}
+
+.head .fr li a {
+	color: #fefdfd;
+	margin-left: 16px
+}
+
+.head .fr li a:hover {
+	color: #cab792
+}
+
+.sina {
+	float: left;
+	width: 22px;
+	height: 17px;
+	margin-top: 12px;
+	transition: background 0.2s;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s;
+	background: url(../images/icon/sprit.png) no-repeat 0 0;
+}
+
+.sina:hover {
+	background: url(../images/icon/sprit.png) no-repeat 0 -17px;
+}
+
+.wechat {
+	float: left;
+	width: 22px;
+	height: 17px;
+	margin-top: 12px;
+	transition: background 0.2s;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s;
+	margin-left: 16px;
+	background: url(../images/icon/sprit.png) no-repeat right 0;
+	position: relative;
+}
+
+.wechat b {
+	position: absolute;
+	bottom: -200px;
+	left: -62px;
+	width: 194px;
+	height: 191px;
+	background: url(../images/icon/top.png) no-repeat;
+	z-index: 1;
+	display: none;
+}
+
+.wechat:hover {
+	background: url(../images/icon/sprit.png) no-repeat right -17px;
+}
+
+.wechat:hover b {
+	display: block;
+}
+
+.user_sign span {
+	color: #fdfdfd;
+	cursor: pointer;
+	padding-left: 8px;
+}
+
+.user_sign span:hover {
+	color: #CAB792;
+}
+
+.logo {
+	/*width: 500px;*/
+}
+
+.logo a {
+	display: block
+}
+
+.nav_li li {
+	line-height: 90px;
+	margin-right: 42px;
+	font-size: 16px;
+}
+
+.nav_li li.cur a {
+	color: #a01e3f
+}
+
+.nav_li li a {
+	color: #333
+}
+
+.nav_li li a:hover {
+	color: #a01e3f
+}
+
+.sign_wrap {
+	line-height: 90px
+}
+
+.sign_wrap li:hover a,
+.sign_wrap span:hover {
+	color: #CAB792;
+}
+
+.sign_wrap span {
+	padding: 0 6px;
+}
+
+.sign_wrap a {
+	font-size: 16px;
+}
+
+.head .fr li.sign_btn a {
+	position: relative;
+	padding-left: 22px;
+	margin-left: 20px;
+}
+
+.nav {
+	overflow: hidden;
+	background: #fff
+}
+
+.sign_btn a:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 14px;
+	height: 15px;
+	margin-right: 8px;
+	background: url(../images/icon/sign.png);
+}
+
+
+/*
+.sign_btn a:hover:before {
+	background: url("../images/icon/sign_cur.png")
+}*/
+
+.nav .account_li a {
+	display: block;
+	width: 88px;
+	height: 34px;
+	background: #CAB792;
+	line-height: 34px;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 4px;
+	margin-top: 28px;
+}
+
+.nav .account_li a:hover {
+	color: #fff;
+}
+
+.sign_btn_wrap,
+.account_li {
+	width: 88px;
+}
+
+.account_li a:before {
+	content: "";
+	float: left;
+	width: 12px;
+	height: 14px;
+	margin: 8px 4px 0 8px;
+	background: url(../images/icon/account.png) no-repeat;
+}
+
+.sign_btn_wrap a {
+	font-size: 16px;
+	line-height: 90px;
+}
+
+.sign_btn_wrap a:hover {
+	color: #CAB792;
+}
+
+.sign_btn_wrap span {
+	padding: 0 4px;
+	color: #333;
+	font-size: 16px;
+	line-height: 90px;
+}
+
+.sign_static {
+	display: none
+}
+
+#userLogin {
+	width: 80px;
+	text-align: right
+}
+
+.sign_static a {
+	height: 30px;
+	line-height: 30px;
+	margin-top: 25px;
+	display: inline-block;
+	width: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+	white-space: nowrap
+}
+
+.sign_static span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 25px;
+	float: left
+}
+
+.footer {
+	width: 100%;
+	background: #333;
+	padding: 48px 0 0;
+	position: relative
+}
+
+.foot_ul {
+	overflow: hidden;
+	/*width: 733px*/
+}
+
+.foot_ul li,
+.foot_ul li a {
+	color: #fff
+}
+
+.foot_ul .foot_ul_one {
+	color: #fff;
+	margin-bottom: 26px;
+	overflow: hidden
+}
+
+.foot_ul ul li b {
+	display: block;
+	width: 86px;
+	color: #FeFDFD;
+}
+
+.foot_ul .foot_ul_one li a {
+	display: block;
+	color: #FDFDFD;
+	width: 90px;
+}
+
+.foot_ul .foot_ul_one li a:hover {
+	color: #CAB792;
+}
+
+.foot_ul_two {
+	margin-bottom: 26px;
+	overflow: hidden
+}
+
+.cic_service {
+	/*width: 250px*/
+}
+
+.erweima {
+	/*width: 100%*/
+}
+
+.erweima dl {
+	margin-right: 46px;
+}
+
+.erweima dd {
+	text-align: center;
+	color: #fafafa;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.erweima img {
+	width: 101px;
+	height: 101px
+}
+
+.foot_con {
+	overflow: hidden;
+	margin-bottom: 38px
+}
+
+.service_media {
+	height: 66px
+}
+
+.copyright {
+	padding: 34px 0 36px;
+	overflow: hidden;
+	border-top: 1px solid #666666
+}
+
+.copyright .font_size16 {
+	color: #fff;
+	line-height: 1.8;
+	text-align: center
+}
+
+.copyright .font_size14 {
+	color: #fff;
+	line-height: 2;
+	text-align: center
+}
+
+.copyright .font_size14 a {
+	color: #fff
+}
+
+.kufu_info h3 {
+	font-size: 30px;
+	color: #C0AA76;
+	margin-top: 40px;
+	margin-bottom: 18px;
+}
+
+.kufu_info p {
+	color: #fafafa;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.honor_icon {
+	margin-top: 35px
+}
+
+.honor_icon li {
+	text-align: center
+}
+
+.service_media a {
+	display: block;
+	width: 31px;
+	height: 25px;
+	margin: 23px 10px 0 0;
+	transition: background 0.2s;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s
+}
+
+.service_media .sina {
+	background: url("../images/icon/sina_spirit.png") no-repeat 0 0
+}
+
+.service_media .sina:hover {
+	background: url("../images/icon/sina_spirit.png") no-repeat 0 -25px
+}
+
+.slider_nav {
+	position: fixed;
+	bottom: 100px;
+	right: 8px;
+	width: 56px;
+	cursor: pointer;
+	z-index: 1;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider_nav li {
+	width: 56px;
+	height: 56px;
+	background: #fff;
+	position: relative;
+	border-bottom: 1px solid #eeeeee;
+	transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s
+}
+
+.slider_nav li.service_back {
+	border-bottom: 0;
+}
+
+.slider_nav li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	-ms-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+}
+
+.slider_nav li a:hover {
+	background: #cab792;
+}
+
+.slider_nav li a:hover span {
+	color: #fff;
+	display: block;
+}
+
+.slider_nav li a:hover i {
+	margin-top: -56px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.slider_nav li a i {
+	width: 56px;
+	height: 56px;
+	display: block;
+}
+
+.service_chat i {
+	background: url("../images/icon/slider_icon_01.png") no-repeat center center
+}
+
+.service_app i {
+	background: url("../images/icon/slider_icon_02.png") no-repeat center center
+}
+
+.service_phone i {
+	background: url("../images/icon/slider_icon_03.png") no-repeat center center
+}
+
+.service_wechat i {
+	background: url("../images/icon/slider_icon_04.png") no-repeat center center
+}
+
+.service_back i {
+	background: url("../images/icon/slider_icon_05.png") no-repeat center center
+}
+
+.slider_nav li a span {
+	color: #cab792;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	padding-top: 13px;
+}
+
+.service_img {
+	width: 140px;
+	height: 140px;
+	position: absolute;
+	bottom: 0;
+	right: 68px;
+	background: #FFF;
+	display: none;
+}
+
+.service_img img {
+	width: 140px;
+	height: 140px;
+}
+
+.income_calculation {
+	width: 354px;
+	padding: 14px 0;
+	position: absolute;
+	top: -147px;
+	right: 68px;
+	background: #FFF;
+	cursor: initial;
+	display: none;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	z-index: 3;
+}
+
+.income_calculation h4 {
+	text-align: right;
+}
+
+.income_calculation h4 .ic_close {
+	color: #7b7b7b;
+	font-size: 20px;
+	cursor: pointer;
+	padding-right: 14px;
+	font-weight: normal;
+}
+
+.income_calculation_con {
+	padding: 0 35px 14px;
+	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
+}
+
+.ic_l {
+	padding-left: 5px;
+	width: 150px;
+}
+
+.income_calculation_con h5 {
+	font-size: 14px;
+	color: #333333;
+	font-weight: normal;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.ic_input_group {
+	position: relative;
+}
+
+.ic_input_group input {
+	line-height: 34px;
+	height: 34px;
+	font-size: 12px;
+	padding-left: 15px;
+	padding-right: 20px;
+	border-radius: 6px;
+	border: 1px solid #c5c5c5;
+	margin-bottom: 15px;
+	width: 113px;
+	outline: none!important;
+}
+
+.ic_input_group input:focus {}
+
+.ic_input_group label {
+	position: absolute;
+	top: 0;
+	right: 5px;
+	line-height: 34px;
+	font-size: 12px;
+	color: #adadad;
+}
+
+.ic_r {
+	width: 150px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.ic_r li {
+	font-size: 12px;
+	width: 100%;
+	line-height: 36px;
+	border-bottom: 0;
+	height: 36px;
+	margin-bottom: 15px;
+	color: #535353;
+}
+
+.ic_btn {
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	background: #cab792;
+	border-radius: 5px;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.ic_msg {
+	margin-top: 14px;
+	font-size: 12px;
+	color: #818181;
+	text-align: center;
+}
+
+.ic_msg h5 {
+	margin-top: 8px;
+	color: #cab792;
+	font-weight: normal;
+}
+
+.income_calculation_con {
+	position: relative;
+}
+
+.ic_error {
+	color: #ff0300;
+	margin-bottom: 8px;
+	font-size: 12px;
+	margin-left: 8px;
+	line-height: 1;
+	clear: both;
+	display: none;
+}
+
+.ic_error:before {
+	float: left;
+	content: "!";
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	text-align: center;
+	background: #ff0300;
+	border-radius: 100%;
+	color: #fff;
+	margin-right: 8px;
+}
+
+.service_app:hover .service_img,
+.service_phone:hover .service_img,
+.service_wechat:hover .service_img {
+	display: block;
+}
+
+.service_img h5 {
+	padding: 20px 0 0;
+	font-size: 14px;
+	text-align: center;
+	color: #171717;
+	line-height: 2;
+	font-weight: normal
+}
+
+.service_msg {}
+
+.service_img h4 {
+	color: #a01e3f;
+	text-align: center;
+	line-height: 2;
+	font-size: 18px
+}
+
+.service_img p {
+	text-align: center;
+	color: #1C1C1C;
+	line-height: 2;
+	font-size: 12px
+}
+
+.mask_drop,
+.mask_login_wrap,
+.mask_wrap {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: none
+}
+
+.user_sign {
+	visibility: hidden;
+}
+
+.sign_mask {
+	width: 409px;
+	height: 386px;
+	background: url("../images/icon/mask_sign.png") no-repeat;
+	position: fixed;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	margin-left: -205px;
+	margin-top: -198px;
+	color: #34393d;
+	text-align: center;
+	display: none
+}
+
+.sign_con {
+	padding-top: 250px;
+}
+
+.sign_con span {
+	color: #febe14;
+}
+
+.sign_mask.cur {
+	background: url("../images/icon/mask_sign_cur.png") no-repeat;
+}
+
+.sign_mask h5 {
+	padding-top: 230px;
+	font-weight: normal;
+	line-height: 1.5
+}
+
+.sign_mask p {
+	line-height: 1.8
+}
+
+.sign_mask h4 {
+	color: #ffd305;
+	font-weight: normal
+}
+
+.banner_wrap img {
+	width: 100%
+}
+
+.pagination_holder {
+	margin: 48px auto 48px;
+}
+
+ul.simple_pagination {
+	list-style: none
+}
+
+.simple_pagination {
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	text-align: center
+}
+
+.simple_pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block
+}
+
+.simple_pagination li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left
+}
+
+.light_theme a,
+.light_theme span {
+	float: left;
+	color: #999;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid #ebebeb;
+	min-width: 14px;
+	margin: 0 8px 0 0;
+	padding: 4px 10px;
+	background: #ebebeb
+}
+
+.light_theme a,
+.light_theme a {
+	background: #fff
+}
+
+.light_theme .current {
+	background: #fff;
+	color: #111;
+	border-color: #fff;
+	cursor: default;
+}
+
+.light_theme .ellipse {
+	background: none;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	font-weight: bold;
+	cursor: default
+}
+
+.mask_fixed_wrap {
+	width: 814px;
+	height: 334px;
+	background: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -407px;
+	margin-top: -195px;
+	z-index: 3;
+	padding: 28px 0;
+	text-align: center;
+	display: none
+}
+
+.close_mask {
+	margin-bottom: 50px
+}
+
+.close_mask span {
+	float: right;
+	padding-right: 30px;
+	color: #999;
+	cursor: pointer
+}
+
+.mask_fixed_wrap p {
+	color: #666666;
+	line-height: 2;
+	text-align: center;
+	font-size: 20px
+}
+
+.mask_btn {
+	width: 272px;
+	height: 44px;
+	border-radius: 6px;
+	margin: 40px 0;
+	background: #a01e3f;
+	line-height: 44px;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	color: #fff;
+	font-size: 20px
+}
+
+.mask_fixed_wrap div a {
+	color: #a01e3f;
+	font-size: 20px;
+	line-height: 2
+}
+
+input:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+.nav_li li.old_version {
+	margin: 0 0 0 5px
+}
+
+.nav_li li.old_version a {
+	width: 63px;
+	height: 32px;
+	border-radius: 20px;
+	background: #a01e3f;
+	color: #fff;
+	font-size: 16px;
+	display: block;
+	margin-top: 24px;
+	line-height: 32px;
+	text-align: center
+}
+
+.honor_con {
+	width: 1002px;
+	margin: 0 auto;
+	text-align: center
+}
+
+.honor_con span {
+	cursor: pointer;
+	width: 130px;
+	height: 36px;
+	margin: 0 10px 40px;
+	display: inline-block;
+	transition: background 0.2s;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s
+}
+
+.honor_con .span_img_01 {
+	background: url("../images/icon/supervise.png") 0 0;
+}
+
+.honor_con .span_img_01:hover {
+	background: url("../images/icon/supervise.png") 0 -36px
+}
+
+.honor_con .span_img_02 {
+	background: url("../images/icon/supervise.png") -130px 0;
+}
+
+.honor_con .span_img_02:hover {
+	background: url("../images/icon/supervise.png") -130px -36px
+}
+
+.honor_con .span_img_03 {
+	background: url("../images/icon/supervise.png") -260px 0;
+}
+
+.honor_con .span_img_03:hover {
+	background: url("../images/icon/supervise.png") -260px -36px;
+}
+
+.honor_con .span_img_04 {
+	background: url("../images/icon/supervise.png") -390px 0;
+}
+
+.honor_con .span_img_04:hover {
+	background: url("../images/icon/supervise.png") -390px -36px;
+}
+
+.honor_con .span_img_05 {
+	background: url("../images/icon/supervise.png") -520px 0;
+}
+
+.honor_con .span_img_05:hover {
+	background: url("../images/icon/supervise.png") -520px -36px;
+}
+
+.con_wrap .font_size12 {
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+.con_wrap .font_size12 a {
+	color: #d4d4d4;
+	overflow: hidden;
+}
+
+.con_wrap .font_size12 {
+	color: #d4d4d4;
+	overflow: hidden;
+	line-height: 20px;
+}

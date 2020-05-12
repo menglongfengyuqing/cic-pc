@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台——信息披露-运营数据</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/disclosure.css" />
+		<style>
+			#mainL,
+			#mainR {
+				height: 378px;
+				width: 50%;
+				float: left;
+			}
+			
+			.userChart {
+				height: 350px!important;
+				margin-top: 0;
+			}
+			
+			.user_data ul {
+				position: relative;
+			}
+			
+			.user_data ul li {
+				width: 50%;
+			}
+			
+			.canvas_wrap {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="disclosure_wrap">
+			<div class="month_banner">
+				<div class="month_banner_wrap">
+					<img src="images/disclosure/banner.png" />
+					<div class="mb_msg">
+						<h3 id="disclosureDataMonthTitle">运营报告</h3>
+						<div class="time">
+							<span id="disclosureDataMonthDate"></span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="month_group">
+				<div class="mouth_tit"><img src="images/disclosure/tit_04.png" /></div>
+				<div class="data_platform">
+					<ul>
+						<li class="fl">
+							<dl>
+								<dt id="investTotalAmount_id">0</dt>
+								<dd>累计借贷金额（元）</dd>
+							</dl>
+						</li>
+						<li class="fr">
+							<dl>
+								<dt id="loanTotalNumbers_id">0</dt>
+								<dd>累计借贷笔数（笔）</dd>
+							</dl>
+
+						</li>
+						<li class="fl">
+							<dl>
+								<dt id="interestTotalAmount_id">0</dt>
+								<dd>累计算为用户赚取（元）</dd>
+							</dl>
+						</li>
+						<li class="fr">
+							<dl>
+								<dt id="loanUserTotalInterestAmount_id">0</dt>
+								<dd>借贷利息余额（元）</dd>
+							</dl>
+
+						</li>
+						<li class="fl">
+							<dl>
+								<dt id="loanUserInfoTotalNumbers_id">0</dt>
+								<dd>累计出借人总数（人）</dd>
+							</dl>
+						</li>
+						<li class="fr">
+							<dl>
+								<dt id="investPerCapitaTotalAmount_id">0</dt>
+								<dd>人均出借金额（元）</dd>
+							</dl>
+
+						</li>
+						<li class="fl">
+							<dl>
+								<dt id="loanUserTotalNumbers_id">0</dt>
+								<dd>累计借款人总数（人）</dd>
+							</dl>
+						</li>
+						<li class="fr">
+							<dl>
+								<dt id="loanPerCapitaTotalAmount_id">0</dt>
+								<dd>人均借款金额（元）</dd>
+							</dl>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="month_group">
+				<div class="mouth_tit"><img src="images/disclosure/tit_02.png" /></div>
+				<div class="data_month_basic">
+					<ul>
+						<li class="fl">
+							<span id="loanInvestTotalAmount_id"></span>
+							<em>成交金额(元)</em>
+						</li>
+						<li class="fl">
+							<span id="investPeopleTotalCount_id"></span>
+							<em>出借人数(人)</em>
+						</li>
+						<li class="fl">
+							<span id="investTotalCount_id"></span>
+							<em>出借笔数(笔)</em>
+						</li>
+					</ul>
+				</div>
+				<div class="data_circle">
+					<div id="mainL"></div>
+					<div id="mainR"></div>
+				</div>
+
+			</div>
+			<div class="month_group">
+				<div class="mouth_tit"><img src="images/disclosure/tit_03.png" /></div>
+				<div class="month_three">
+					<div class="month_three_top">
+						<ul>
+							<li class="fl">
+								<dl>
+									<dd id="theTopTenStayStillTotalAmountPercentage_id">前十大借款人待还金额占比0.00%</dd>
+									<dt>
+									<div class="progress">
+										<div class="outer">
+											<span class="inner" id="theTopTenStayStillTotalAmountPercentage_span"></span>
+										</div>
+									</div>
+								</dt>
+									<dd id="otherTheTopTenStayStillTotalAmountPercentage_id">其他占比0.00%</dd>
+								</dl>
+							</li>
+							<li class="fr">
+								<dl>
+									<dd id="theBiggestStayStillTotalAmountPercentage_id">最大单一借款人待还金额0.00%</dd>
+									<dt>
+									<div class="progress">
+										<div class="outer">
+											<span class="inner" id="theBiggestStayStillTotalAmountPercentage_span"></span>
+										</div>
+									</div>
+								</dt>
+									<dd id="otherTheBiggestStayStillTotalAmountPercentage_id">其他占比0.00%</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="month_three_bottom">
+						<div class="user_data">
+							<ul>
+								<li class="fl">
+									<div class="canvas_wrap">
+										<div class="rate_cic_dis"></div>
+										<div id="sexDistribution" class="userChart"></div>
+									</div>
+								</li>
+								<li class="fr li_posi">
+									<div class="canvas_wrap">
+										<div class="rate_cic_dis"></div>
+										<div id="ageDistribution" class="userChart"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="month_group">
+				<div class="mouth_tit"><img src="images/disclosure/tit_01.png" /></div>
+				<div class="data_ouerdue_msg">
+					<ul>
+						<li class="fl">
+							<dl>
+								<dt>逾期金额（元）</dt>
+								<dd>0.00</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>金额逾期率(%)</dt>
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>项目逾期率(%)</dt>
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>逾期笔数(笔)</dt>
+								<dd>0</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>逾期90天以上金额(元)</dt>
+								<dd>0.00</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>逾期90天以上笔数(笔)</dt>
+								<dd>0</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>项目分级逾期率(%)1～90(天)</dt>
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>项目分级逾期率(%)91～180(天)</dt>
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>项目分级逾期率(%)180(天)以上</dt>
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>金额分级逾期率(%)1～90(天)</dt> 
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>金额分级逾期率(%)91～180(天)</dt>
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+						<li class="fl">
+							<dl>
+								<dt>金额分级逾期率(%)180(天)以上</dt>
+								<dd>0.00%</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<script type="text/javascript" src="js/highstock.js"></script>
+	<script type="text/javascript" src="js/disclosure_data_month.js"></script>
+
+</html>

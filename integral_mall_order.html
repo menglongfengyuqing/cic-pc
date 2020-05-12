@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>中投摩根—领先的互联网借贷信息交互平台—中投摩根-积分商城-订单详情</title>
+    <meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords"/>
+    <meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率."
+          name="description"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/integral.min.css" />
+</head>
+
+<body>
+
+<!--main_contain-->
+<div class="main_contain integral-bg">
+
+    <div class="con_wrap order_wrap mb_16">
+        <h3 class="position">
+            <a href="integral_mall_home.html">积分商城 ></a>
+            <a href="" id="productId">商品详情 ></a>订单确认</h3>
+        <div class="white_bg order_con">
+            <h4 id="orderTit">填写并核对订单信息</h4>
+            <div class="order_border_wrap">
+                <div class="order_address">
+                    <h5>收货人信息 <span class="fr" id="addAdress"><b>+</b>新增收货地址</span></h5>
+                    <div class="order_address_con"></div>
+                </div>
+                <div class="order_pay clear">
+                    <h5>支付方式</h5>
+                    <div class="pay_way">
+                    </div>
+                </div>
+                <div class="order_details">
+                    <h5>送货清单</h5>
+                    <div class="product_details"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" value="" id="delId">
+<input type="hidden" value="" id="modifyId">
+<input type="hidden" value="" id="selectAdressId"> 
+
+<div class="mask_drop"></div>
+<div class="mask_del">
+    <span class="close del_close">X</span>
+    <h5>确认删除该地址吗？</h5>
+    <ul>
+        <li><span>收货人：</span>王丽娜</li>
+        <li><span>联系方式：</span>136****8924</li>
+        <li><span>收货地址：</span>北京市</li>
+    </ul>
+    <div class="del_btn_way">
+        <span class="cur" id="delSure">确定</span>
+        <span class="del_close">取消</span>
+    </div>
+</div>
+<div class="mask_address">
+    <h4>新增收货地址<span class="close">X</span></h4>
+    <div class="setting_mail_con">
+        <div class="setting_mail_group ">
+            <label>收货人</label>
+            <input type="text" name="" value="" class="fr" placeholder="请输入收货人姓名" id="name">
+            <div class="error_msg fl error_name"></div>
+        </div>
+
+        <div class="setting_mail_group">
+            <label>所在地址</label>
+            <div class="fl">
+                <select name="" id="selProvince"></select>
+                <select name="" id="selCity"></select>
+            </div>
+            <div class="error_msg fl error_select"></div>
+        </div>
+        <div class="setting_mail_group ">
+            <label>详细地址</label>
+            <input name="" placeholder="请输入详细地址" class="fl" id="address" type="text"/>
+            <div class="error_msg fl error_txt"></div>
+        </div>
+        <div class="setting_mail_group ">
+            <label>手机号</label>
+            <input type="text" name="" value="" class="fr" placeholder="请输入收货人手机号" id="mobile">
+            <input type="hidden" name="" value="" class="fr" placeholder="请输入收货人手机号" id="phoneNum">
+            <div class="error_msg fl error_phone"></div>
+        </div>
+        <div class="setting_mail_group">
+            <span class="save_btn" id="saveAddress">保存</span>
+        </div>
+
+    </div>
+</div>
+
+<div class="mask_points_wrap points_less">
+    <p>您的积分不足</p>
+    <p>签到、出借、邀请好友可快速赚钱积分哦~</p>
+    <a href="javascript:;">我知道了</a>
+    <span></span>
+</div>
+<div class="mask_tip"></div>
+<div class="mask_points_wrap points_success">
+    <p>订单已确认，请耐心的等待收货～</p>
+    <p>可在我的奖品中查看~</p>
+    <a href="integral_mall_win.html" onclick="_czc.push(['_trackEvent', '兑换成功弹窗', '点击', '立即查看']);">立即查看</a>
+    <span></span>
+</div>
+<input type="hidden" name="addressLength" id="addressLength" value="" />
+<input type="hidden" name="setDefault" id="setDefault" value="" />
+<input type="hidden" name="yesNo" id="yesNo" value="" />
+</body>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/placeholder.js"></script>
+<script type="text/javascript" src="js/CityJson.js"></script>
+<script type="text/javascript" src="js/ProJson.js"></script>
+<script type="text/javascript" src="js/integral_mall_order.js"></script>
+</html>

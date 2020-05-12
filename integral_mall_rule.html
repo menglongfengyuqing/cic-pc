@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中投摩根—领先的互联网借贷信息交互平台—中投摩根-积分商城-积分规则</title>
+		<meta content="中投摩根,cicmorgan,供应链金融, 区块链金融,P2P网贷平台,互联网金融" name="keywords" />
+		<meta content="中投摩根，以供应链为主导的综合性金融服务平台, 出借者首选互联网出借平台,中投摩根在健全的风险管控体系基础上,为出借者提供互联网金融出借产品,提高您的资金利用率." name="description" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/integral.min.css" />
+  <style>
+    	.integral_tab ul{
+    		padding: 0 50px;
+    	}
+    </style>
+	</head>
+
+	<body class="">
+ <div class="integral_banner">
+        <img src="images/banner/banner_03.jpg"/>
+    </div>
+		<!--main_contain-->
+		<div class="main_contain integral-bg">
+
+
+			<!--integral_main-->
+			<div class="con_wrap white_bg mb_16 ">
+				<div class="integral_tab">
+					<ul>
+			  <li class="fl">
+                    <a href="integral_mall_home.html" onclick="_czc.push(['_trackEvent', '积分商城tab', '点击', '积分商城']);">积分商城</a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;" id="score_game" onclick="_czc.push(['_trackEvent', '积分商城tab', '点击', '积分抽奖']);">积分抽奖</a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;" id="score_change" onclick="_czc.push(['_trackEvent', '积分商城tab', '点击', '我的奖品']);">我的奖品</a>
+                </li>
+                <li class="fl cur">
+                    <a href="integral_mall_rule.html" onclick="_czc.push(['_trackEvent', '积分商城tab', '点击', '积分规则']);">积分规则</a>
+                </li>
+                <li class="fr" id="myPoints"></li>
+					</ul>
+				</div>
+
+			<div class="account_data_wrap payment_data_wrap">
+
+				<!--account invest total-->
+				<div class="account_center setting_center">
+
+					<div class="integral_rule_wrap">
+
+							  	<dl>
+							  		<dt>出借</dt>
+							  		<dd>用户完成出借可获得相应数量积分。</dd>
+									<dd>计算方式：出借金额*出借项目月份数/100</dd>
+									<dd>示例（1）：出借30天项目5000元，可获得5000*1/100=50积分</dd>
+									<dd>示例（2）：出借180天项目20000元，可获得20000*6/100=1200积分</dd>
+							  	</dl>							  								  	
+							  	<dl>
+							  		<dt><span></span>注册</dt>
+							  		<dd>用户完成注册可获得500积分。</dd>
+								
+							  	</dl>
+							  	<dl>
+							  		<dt><span></span>邀请好友</dt>
+							  		<dd>邀请好友注册中投摩根，被邀请人完成出借，邀请人可获得100积分奖励，同时获得该被邀请用户每笔出借所获积分的5%。</dd>
+								
+							  	</dl>
+							  	<dl>
+							  		<dt><span></span>签到</dt>
+							  		<dd>注册用户每日签到可获得1积分，连续签到7天可额外获得3积分（连续7天签到总共可获得10积分）。</dd>
+									
+							  	</dl>
+							    <dl>
+							  		<dt><span></span>特别奖励</dt>
+							  		<dd>用户生日当天完成签到可获双倍积分，完成出借可获1.5倍积分。</dd>								
+							  	</dl>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</body>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+<script>
+	getUserBouns();
+	if(token != null && token.trim().length > 0) {
+		$("#score_game").attr("href", "integral_mall_game.html");
+		$("#score_change").attr("href", "integral_mall_win.html");
+		$("#myPoints").show();
+	} else {
+		$("#score_game").attr("href", "login.html");
+		$("#score_change").attr("href", "login.html");
+		$("#myPoints").hide();
+	}
+
+	// 获得用户积分值
+	function getUserBouns() {
+		$.ajax({
+			url: ctxpath + "/bouns/userBouns",
+			type: 'post',
+			dataType: 'json',
+			data: {
+				from: "1",
+				token: token
+			},
+			success: function(result) {
+				if(result.state == '0') {
+					$("#myPoints").html("我的积分："+ result.data.score+'<i></i>').click(function () {
+					window.location.href="integral_mall_points.html";
+				  });
+				}
+			}
+		});
+	}
+</script>
+</html>
